@@ -59,7 +59,7 @@ export function Skills() {
     {apartados.map((a: any) => (
       <div className="md:w-1/4" key={a.id}>
         <h1 className="pb-2 font-bold text-2xl text-white">{a.titulo}</h1>
-        <ul className="pl-2">
+        <ul className="pl-2 text-darkpurple-400">
           {a.items.map((p: String) => (
             <li>- {p}</li>
           ))}

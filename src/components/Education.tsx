@@ -1,7 +1,15 @@
 import type { Key } from "react";
 
 export function Education(){
-
+  const experiencia = [
+    {
+      nombre: "Instituto Provincial de Educación Superior (IPES)",
+      titulo: "Desarrollador FullStack",
+      duracion: "Febrero 2025 - Actualidad",
+      descripcion: "Estamos desarrollando un sistema académico integral como proyecto FullStack, diseñado para optimizar la gestión de información dentro de una universidad. El sistema se divide en dos módulos principales: uno dirigido al personal administrativo y docente, y otro destinado a los alumnos.",
+      aptitudes: ["PostgreSQL", "TypeScript", "NextJS", "ReactJS", "Shadcn"]
+    },
+  ];
   const estudios = [
     {
       nombre: "Universidad Tecnológica Nacional (UTN)",
@@ -15,7 +23,7 @@ export function Education(){
       titulo: "Programador en .NET + React",
       duracion: "Marzo 2025 - Junio 2025",
       descripcion: "Entrenamiento intensivo enfocado en el desarrollo de aplicaciones web con tecnologías Microsoft y frontend moderno, combinando .NET y React para proyectos colaborativos con metodologías ágiles.",
-      aptitudes: ["Microsoft SQL Server", "SQL Server Management Studio", "Visual Studio", ".NET Framework", "ASP.NET", "React.js"]
+      aptitudes: ["Microsoft SQL Server", "SQL Server Management Studio", "Visual Studio", ".NET Framework", "ASP.NET", "Reactjs"]
     },
     {
       nombre: "Centro Politécnico Malvinas Argentinas",
@@ -48,18 +56,40 @@ export function Education(){
   ];
 
   return <div className="p-4 space-y-6 text-white">
-    <h1 className="text-4xl text-center">Estudios</h1>
-    {estudios.map((e: any, i: Key) => (
+    <h1 className="text-4xl font-bold text-center">Experiencia</h1>
+    {experiencia.map((e: any, i: Key) => (
       <div className="md:flex pb-8" key={i}>
         <div className="md:w-1/4 md:pr-4 md:flex md:flex-col items-end">
-          <h3 className="text-xl">{e.duracion}</h3>
+          <h3 className="text-xl text-darkpurple-500">{e.duracion}</h3>
         </div>
 
         <div className="md:w-3/4 md:pl-2">
-          <h1 className="text-3xl underline">{e.nombre}</h1>
+          <h1 className="text-3xl underline text-darkpurple-400">{e.nombre}</h1>
           <h2 className="text-2xl">{e.titulo}</h2>
           <p>{e.descripcion}</p>
-          <ul className="pl-6 pt-2 grid sm:grid-cols-4 md:grid-cols-6 gap-2">
+          <ul className="pl-6 pt-2 text-darkpurple-500 grid sm:grid-cols-4 md:grid-cols-6 gap-2">
+            {e.aptitudes.map((a: any, j: Key) => (
+              <li key={j}>{a}</li>  
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
+
+    <hr className="border-t border-darkpurple-700" />
+
+    <h1 className="text-4xl font-bold text-center">Estudios</h1>
+    {estudios.map((e: any, i: Key) => (
+      <div className="md:flex pb-8" key={i}>
+        <div className="md:w-1/4 md:pr-4 md:flex md:flex-col items-end">
+          <h3 className="text-xl text-darkpurple-500">{e.duracion}</h3>
+        </div>
+
+        <div className="md:w-3/4 md:pl-2">
+          <h1 className="text-3xl underline text-darkpurple-400">{e.nombre}</h1>
+          <h2 className="text-2xl">{e.titulo}</h2>
+          <p>{e.descripcion}</p>
+          <ul className="pl-6 pt-2 text-darkpurple-500 grid sm:grid-cols-4 md:grid-cols-6 gap-2">
             {e.aptitudes.map((a: any, j: Key) => (
               <li key={j}>{a}</li>  
             ))}

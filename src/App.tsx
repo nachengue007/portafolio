@@ -48,8 +48,8 @@ function App() {
         onClick={() => setSeccion(nombreSeccion)}
       >
         {/* Líneas laterales */}
-        <span className="absolute left-0 top-1/2 w-0 h-[2px] bg-darkpurple-800 transition-all duration-300 group-hover:w-10 -translate-y-1/2"></span>
-        <span className="absolute right-0 top-1/2 w-0 h-[2px] bg-darkpurple-800 transition-all duration-300 group-hover:w-10 -translate-y-1/2"></span>
+        <span className="absolute left-0 top-1/2 w-0 h-[2px] bg-darkpurple-800 transition-all duration-300 group-hover:w-15 -translate-y-1/2"></span>
+        <span className="absolute right-0 top-1/2 w-0 h-[2px] bg-darkpurple-800 transition-all duration-300 group-hover:w-15 -translate-y-1/2"></span>
     
         {/* Texto */}
         <span className="relative">{titulo}</span>
@@ -100,11 +100,11 @@ function App() {
     />
     <div className="md:flex md:h-screen bg-darkpurple-800">
       {/* izquierda */}
-      <div className="md:w-2/6 flex justify-center md:justify-end w-full">
+      <div className="md:w-2/6 flex justify-center w-full">
         <div className="p-6 flex md:flex-row md:items-center">
-          <div className="flex flex-col md:items-center">
+          <div className="flex flex-col items-center">
             <h1 className='text-4xl font-bold pb-4 text-white text-center'>Ignacio Fonseca</h1>
-            <p className='pb-6 text-xl text-darkpurple-500'>FullStack Developer de Aplicaciones Web</p>
+            <p className='pb-6 text-xl text-darkpurple-500 text-center'>FullStack Developer de Aplicaciones Web</p>
             {renderButton('about', 'Sobre mi')}
             {renderButton('skills', 'Habilidades')}
             {renderButton('projects', 'Proyectos')}
