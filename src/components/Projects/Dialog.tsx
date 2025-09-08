@@ -20,7 +20,7 @@ export function Dialog({ n }: DialogProps ) {
     <motion.button
       whileHover={{ scale: 1.075 }}
       whileTap={{ scale: 0.75 }}
-      className="pr-4 pb-8" 
+      className="pb-8" 
       onClick={() => setOpen(true)}
     >
       <div className="max-w-sm rounded-lg transition-colors duration-200 text-white bg-darkpurple-700 hover:text-darkpurple-800 hover:bg-darkpurple-400">

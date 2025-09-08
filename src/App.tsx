@@ -134,7 +134,7 @@ function App() {
       </div>
       
       {/* derecha */}
-      <div className="md:w-4/6 pr-6 overflow-auto relative">
+      <div className="md:w-4/6 overflow-auto relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={seccion}
