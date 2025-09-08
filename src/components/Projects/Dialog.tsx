@@ -18,8 +18,8 @@ export function Dialog({ n }: DialogProps ) {
 
   return <>
     <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 1.075 }}
+      whileTap={{ scale: 0.75 }}
       className="pr-4 pb-8" 
       onClick={() => setOpen(true)}
     >

@@ -8,18 +8,27 @@ import { Projects } from './components/Projects';
 import { Education } from './components/Education';
 import { AboutPortafolio } from './components/AboutPortafolio';
 
-type nombres = 'about' | 'skills' | 'projects' | 'education' | 'aboutPortafolio';
-
 import linkedinLogo from './assets/LinkedIn_logo.png';
 import githubLogo from './assets/github_logo.png';
 import gitlabLogo from './assets/gitlab_logo.png';
 import youtubeLogo from './assets/Youtube_logo.png';
 
+type nombres = 'about' | 'skills' | 'projects' | 'education' | 'aboutPortafolio';
+
 function App() {
 
   const [seccion, setSeccion] = useState<nombres>('about');
+  const [seccionHover, setSeccionHover] = useState('');
   
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const widthMap: Record<nombres, number> = {
+    'about': 105,
+    'skills': 95,
+    'projects': 100,
+    'education': 60,
+    'aboutPortafolio': 60,
+  };
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -42,14 +51,24 @@ function App() {
   };
 
   const renderButton = (nombreSeccion: nombres, titulo: string) => {
+    const isHovered = seccionHover === nombreSeccion;
+
     return <div className='pb-2'>
       <button 
         className='w-[300px] p-2 bg-darkpurple-800 font-bold text-white rounded relative overflow-hidden group transition-colors duration-300 hover:bg-darkpurple-500 hover:text-darkpurple-800'
         onClick={() => setSeccion(nombreSeccion)}
+        onMouseOver={() => setSeccionHover(nombreSeccion)}
+        onMouseOut={() => setSeccionHover('')}
       >
         {/* Líneas laterales */}
-        <span className="absolute left-0 top-1/2 w-0 h-[2px] bg-darkpurple-800 transition-all duration-300 group-hover:w-15 -translate-y-1/2"></span>
-        <span className="absolute right-0 top-1/2 w-0 h-[2px] bg-darkpurple-800 transition-all duration-300 group-hover:w-15 -translate-y-1/2"></span>
+        <span 
+          className="absolute left-0 top-1/2 h-[2px] bg-darkpurple-800 transition-all duration-300 -translate-y-1/2"
+          style={{ width: isHovered ? `${widthMap[nombreSeccion]}px` : '0px' }}
+        ></span>
+        <span 
+          className="absolute right-0 top-1/2 h-[2px] bg-darkpurple-800 transition-all duration-300 -translate-y-1/2"
+          style={{ width: isHovered ? `${widthMap[nombreSeccion]}px` : '0px' }}
+        ></span>
     
         {/* Texto */}
         <span className="relative">{titulo}</span>
