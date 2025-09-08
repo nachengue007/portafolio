@@ -1,5 +1,7 @@
 import './App.css'
-import { useState, type Key } from "react";
+import { useEffect, useState, type Key } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
@@ -16,6 +18,20 @@ import youtubeLogo from './assets/Youtube_logo.png';
 function App() {
 
   const [seccion, setSeccion] = useState<nombres>('about');
+  
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   const secciones = {
     'about': (<About />),
@@ -28,10 +44,15 @@ function App() {
   const renderButton = (nombreSeccion: nombres, titulo: string) => {
     return <div className='pb-2'>
       <button 
-        className='w-full p-2 bg-darkpurple-800 text-white rounded transition-colors duration-300 hover:bg-darkpurple-500 hover:text-black'
+        className='w-[300px] p-2 bg-darkpurple-800 font-bold text-white rounded relative overflow-hidden group transition-colors duration-300 hover:bg-darkpurple-500 hover:text-darkpurple-800'
         onClick={() => setSeccion(nombreSeccion)}
       >
-        {titulo}
+        {/* Líneas laterales */}
+        <span className="absolute left-0 top-1/2 w-0 h-[2px] bg-darkpurple-800 transition-all duration-300 group-hover:w-10 -translate-y-1/2"></span>
+        <span className="absolute right-0 top-1/2 w-0 h-[2px] bg-darkpurple-800 transition-all duration-300 group-hover:w-10 -translate-y-1/2"></span>
+    
+        {/* Texto */}
+        <span className="relative">{titulo}</span>
       </button>
     </div>
   }
@@ -60,24 +81,53 @@ function App() {
   ]
 
   return <>
+    <motion.div
+      className="aura"
+      initial={{ x: 0, y: 0 }}
+      animate={{ x: mousePosition.x - 250, y: mousePosition.y - 250 }}
+      transition={{ type: "tween", ease: "backOut", duration: 0.25 }}
+      style={{
+        position: 'fixed',
+        width: '500px',
+        height: '500px',
+        borderRadius: '100%',
+        backgroundColor: '#B14EB1',
+        filter: 'blur(300px)',
+        pointerEvents: 'none',
+        zIndex: 9999,
+        opacity: 0.25,
+      }}
+    />
     <div className="md:flex md:h-screen bg-darkpurple-800">
       {/* izquierda */}
       <div className="md:w-2/6 flex justify-center md:justify-end w-full">
         <div className="p-6 flex md:flex-row md:items-center">
-          <div className="flex flex-col md:items-end">
-            <h1 className='text-4xl pb-4 text-white sm:text-center'>Ignacio Fonseca</h1>
+          <div className="flex flex-col md:items-center">
+            <h1 className='text-4xl font-bold pb-4 text-white text-center'>Ignacio Fonseca</h1>
+            <p className='pb-6 text-xl text-darkpurple-500'>FullStack Developer de Aplicaciones Web</p>
             {renderButton('about', 'Sobre mi')}
             {renderButton('skills', 'Habilidades')}
             {renderButton('projects', 'Proyectos')}
-            {renderButton('education', 'Experiencia/Educacion')}
+            {renderButton('education', 'Experiencia/Estudios')}
             {renderButton('aboutPortafolio', 'Sobre este portafolio')}
           </div>
         </div>
       </div>
       
       {/* derecha */}
-      <div className="md:w-4/6 pr-6 overflow-auto">
-        {secciones[seccion]}
+      <div className="md:w-4/6 pr-6 overflow-auto relative">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={seccion}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="w-full"
+          >
+            {secciones[seccion]}
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       <div className='flex p-2 bg-darkpurple-800 md:w-2/6 md:absolute md:inset-x-1 md:bottom-0'>

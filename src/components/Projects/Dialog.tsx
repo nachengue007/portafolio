@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Proyecto {
   nombre: string;
@@ -14,20 +15,15 @@ interface DialogProps {
 
 export function Dialog({ n }: DialogProps ) {
   const [open, setOpen] = useState(false);
-  
-  const [opacityClass, setOpacityClass] = useState('opacity-0');
-
-  useEffect(() => {
-    if (open) {
-      setOpacityClass('opacity-100');
-    } else {
-      setOpacityClass('opacity-0');
-    }
-  }, [open]);
 
   return <>
-    <button className="pr-4 pb-8" onClick={() => setOpen(true)}>
-      <div className="max-w-sm text-white bg-darkpurple-200 rounded transition-colors duration-300 hover:bg-darkpurple-500 hover:text-black">
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      className="pr-4 pb-8" 
+      onClick={() => setOpen(true)}
+    >
+      <div className="max-w-sm rounded-lg transition-colors duration-200 text-white bg-darkpurple-700 hover:text-black hover:bg-darkpurple-400">
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
             <span className="font-bold text-xl">{n.nombre}</span>
@@ -35,41 +31,54 @@ export function Dialog({ n }: DialogProps ) {
           </div>
         </div>
       </div>
-    </button>
+    </motion.button>
     
-    {open ?
-    <div className={`fixed inset-0 flex items-center justify-center z-50 [transition:opacity_100ms_ease-in] ${opacityClass} bg-black/50`}>
-      <div className="bg-white max-w-sm p-4">
-        <div>
-          <div className="text-xl">{n.nombre}</div>
-          <p className="text-gray-700 text-base">
-            {n.descripcion}
-          </p>
-        </div>
-    
-        <div className="pt-2 pb-2 flex flex-wrap gap-2">
-          {n.tecnologias.map((t: any) => (
-            <span className="bg-gray-200 px-3 py-1 text-sm text-gray-700">
-              {t}
-            </span>
-          ))}
-        </div>
-  
-        <div className="flex justify-between mt-2">
-          <button onClick={() => setOpen(false)} className="text-sm text-red-500 font-semibold hover:underline">
-            Cerrar
-          </button>
-          {n.url !== "" ? 
-            <a href={n.url} target="_blank" className="text-sm text-red-500 font-semibold hover:underline">
-              Ir al proyecto
-            </a>
-          : 
-            <p className="text-sm text-red-500 font-semibold hover:underline">
-              Proximamente
+    <AnimatePresence>
+      {open ?
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2, ease: "easeInOut" }}
+        className={`fixed inset-0 flex items-center justify-center z-50 bg-black/50`}
+      >
+        <motion.div 
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          className="bg-white max-w-sm p-4 rounded-lg"
+        >
+          <div>
+            <div className="text-xl">{n.nombre}</div>
+            <p className="text-gray-700 text-base">
+              {n.descripcion}
             </p>
-          }
-        </div>
-      </div>
-    </div> : null}
+          </div>
+      
+          <div className="pt-2 pb-2 flex flex-wrap gap-2">
+            {n.tecnologias.map((t: any) => (
+              <span className="bg-gray-200 px-3 py-1 text-sm text-gray-700">
+                {t}
+              </span>
+            ))}
+          </div>
+    
+          <div className="flex justify-between mt-2">
+            <button onClick={() => setOpen(false)} className="text-sm text-red-500 font-semibold hover:underline">
+              Cerrar
+            </button>
+            {n.url !== "" ? 
+              <a href={n.url} target="_blank" className="text-sm text-red-500 font-semibold hover:underline">
+                Ir al proyecto
+              </a>
+            : 
+              <p className="text-sm text-red-500 font-semibold hover:underline">
+                Proximamente
+              </p>
+            }
+          </div>
+        </motion.div>
+      </motion.div> : null}
+    </AnimatePresence>
   </>
 }

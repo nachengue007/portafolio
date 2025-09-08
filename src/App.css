@@ -7,3 +7,12 @@
   --color-darkpurple-500: #914091;
   --color-darkpurple-400: #B14EB1;
 }
+
+::selection {
+  color: #320032;
+  background: #B14EB1;
+}
+
+
+
+/*background: #410041;*/
