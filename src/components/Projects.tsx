@@ -1,11 +1,21 @@
 import { Dialog } from "./Projects/Dialog";
 
-import terminalImage from "../assets/terminal.png";
-import gms14Image from "../assets/gms14.png";
-import gm2Image from "../assets/gm2.webp";
-import stockifyImage from "../assets/stockify.png";
-import digitalArsImage from "../assets/digitalArs.svg";
-import vuetifyImage from "../assets/vuetify.ico";
+/// iconos
+import terminalImage from "../assets/proyectos/iconos/terminal.png";
+import gms14Image from "../assets/proyectos/iconos/gms14.png";
+import gm2Image from "../assets/proyectos/iconos/gm2.webp";
+import stockifyImage from "../assets/proyectos/iconos/stockify.png";
+import digitalArsImage from "../assets/proyectos/iconos/digitalArs.svg";
+import vuetifyImage from "../assets/proyectos/iconos/vuetify.ico";
+
+/// screenshots 
+// stokify
+import stokify_1 from "../assets/proyectos/screenshots/stokify/stokify_1.png";
+import stokify_2 from "../assets/proyectos/screenshots/stokify/stokify_2.png";
+import stokify_3 from "../assets/proyectos/screenshots/stokify/stokify_3.png";
+import stokify_4 from "../assets/proyectos/screenshots/stokify/stokify_4.png";
+import stokify_5 from "../assets/proyectos/screenshots/stokify/stokify_5.png";
+import stokify_6 from "../assets/proyectos/screenshots/stokify/stokify_6.png";
 
 export function Projects() {
   const proyectos = [
@@ -16,6 +26,7 @@ export function Projects() {
       tecnologias: ["C++"],
       url: "https://github.com/nachengue007/mundo-matriz",
       image: terminalImage,
+      screenshots: [],
     },
     {
       id: 1,
@@ -24,6 +35,7 @@ export function Projects() {
       tecnologias: ["C++"],
       url: "https://github.com/nachengue007/EncryptFons",
       image: terminalImage,
+      screenshots: [],
     },
     {
       id: 2,
@@ -32,6 +44,7 @@ export function Projects() {
       tecnologias: ["GameMaker: Studio 1.4"],
       url: "https://redviewstudio.itch.io/run",
       image: gms14Image,
+      screenshots: [],
     },
     {
       id: 3,
@@ -40,6 +53,7 @@ export function Projects() {
       tecnologias: ["GameMaker: Studio 1.4"],
       url: "https://redviewstudio.itch.io/eaglekiller",
       image: gms14Image,
+      screenshots: [],
     },
     {
       id: 4,
@@ -48,6 +62,7 @@ export function Projects() {
       tecnologias: ["GameMaker: Studio 1.4", "GameMaker 2025"],
       url: "https://redviewstudio.itch.io/core",
       image: gm2Image,
+      screenshots: [],
     },
     {
       id: 5,
@@ -56,6 +71,7 @@ export function Projects() {
       tecnologias: ["SQLite", "Django", "Django RestFramework", "ReactJs", "Tailwind CSS 3"],
       url: "",
       image: stockifyImage,
+      screenshots: [stokify_1, stokify_2, stokify_3, stokify_4, stokify_5, stokify_6],
     },
     {
       id: 6,
@@ -64,6 +80,7 @@ export function Projects() {
       tecnologias: ["MS SQL Server 2022", "C#", ".NET 8 Web Api", "ReactJS", "Material UI", "Toolpad", "Docker"],
       url: "https://github.com/alkemyTech/CFITDF-NetReact-W2-Back-S1",
       image: digitalArsImage,
+      screenshots: [],
     },
     {
       id: 7,
@@ -72,6 +89,7 @@ export function Projects() {
       tecnologias: ["PostgreSQL", "Django", "Django RestFramework", "Axios", "VueJS", "Vuetify", "Tailwind CSS 4", "Docker"],
       url: "",
       image: vuetifyImage,
+      screenshots: [],
     },
   ];
 
