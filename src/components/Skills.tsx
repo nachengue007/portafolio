@@ -61,7 +61,7 @@ export function Skills() {
         <h1 className="pb-2 font-bold text-2xl text-white">{a.titulo}</h1>
         <ul className="pl-2 text-darkpurple-400">
           {a.items.map((p: String) => (
-            <li>- {p}</li>
+            <li>{'->'} {p}</li>
           ))}
         </ul>
       </div>

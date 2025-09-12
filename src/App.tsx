@@ -8,10 +8,10 @@ import { Projects } from './components/Projects';
 import { Education } from './components/Education';
 import { AboutPortafolio } from './components/AboutPortafolio';
 
-import linkedinLogo from './assets/LinkedIn_logo.png';
-import githubLogo from './assets/github_logo.png';
-import gitlabLogo from './assets/gitlab_logo.png';
-import youtubeLogo from './assets/Youtube_logo.png';
+import linkedinLogo from './assets/redes/LinkedIn_logo.png';
+import githubLogo from './assets/redes/github_logo.png';
+import gitlabLogo from './assets/redes/gitlab_logo.png';
+import youtubeLogo from './assets/redes/Youtube_logo.png';
 
 type nombres = 'about' | 'skills' | 'projects' | 'education' | 'aboutPortafolio';
 
@@ -113,7 +113,7 @@ function App() {
         backgroundColor: '#B14EB1',
         filter: 'blur(300px)',
         pointerEvents: 'none',
-        zIndex: 9999,
+        zIndex: 1,
         opacity: 0.25,
       }}
     />
@@ -134,7 +134,7 @@ function App() {
       </div>
       
       {/* derecha */}
-      <div className="md:w-4/6 pr-6 overflow-auto relative">
+      <div className="md:w-4/6 overflow-auto relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={seccion}

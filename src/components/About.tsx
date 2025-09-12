@@ -7,8 +7,7 @@ export function About() {
     </p>
     <p className="pb-4">
       Me apasiona más la programación del lado del <b>servidor y los 
-      algoritmos</b>, y mi objetivo a largo plazo es llegar a ser <b>senior en 
-      ciencias de datos</b>.
+      algoritmos</b>.
     </p>
     <p className="pb-4">
       He desarrollado varios <b>proyectos personales</b> que incluyen 
