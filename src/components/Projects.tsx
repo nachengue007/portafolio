@@ -17,6 +17,25 @@ import stokify_4 from "../assets/proyectos/screenshots/stokify/stokify_4.png";
 import stokify_5 from "../assets/proyectos/screenshots/stokify/stokify_5.png";
 import stokify_6 from "../assets/proyectos/screenshots/stokify/stokify_6.png";
 
+// digitalars
+import digitalars_1 from "../assets/proyectos/screenshots/digitalars/digitalars_1.jpg";
+import digitalars_2 from "../assets/proyectos/screenshots/digitalars/digitalars_2.jpg";
+
+// core
+import core_1 from "../assets/proyectos/screenshots/core/core_1.png";
+import core_2 from "../assets/proyectos/screenshots/core/core_2.png";
+import core_3 from "../assets/proyectos/screenshots/core/core_3.png";
+import core_4 from "../assets/proyectos/screenshots/core/core_4.png";
+import core_5 from "../assets/proyectos/screenshots/core/core_5.png";
+
+// eaglekiller
+import eaglekiller_1 from "../assets/proyectos/screenshots/eaglekiller/eaglekiller_1.png";
+import eaglekiller_2 from "../assets/proyectos/screenshots/eaglekiller/eaglekiller_2.png";
+import eaglekiller_3 from "../assets/proyectos/screenshots/eaglekiller/eaglekiller_3.png";
+import eaglekiller_4 from "../assets/proyectos/screenshots/eaglekiller/eaglekiller_4.png";
+import eaglekiller_5 from "../assets/proyectos/screenshots/eaglekiller/eaglekiller_5.png";
+import eaglekiller_6 from "../assets/proyectos/screenshots/eaglekiller/eaglekiller_6.png";
+
 export function Projects() {
   const proyectos = [
     {
@@ -53,7 +72,7 @@ export function Projects() {
       tecnologias: ["GameMaker: Studio 1.4"],
       url: "https://redviewstudio.itch.io/eaglekiller",
       image: gms14Image,
-      screenshots: [],
+      screenshots: [eaglekiller_1, eaglekiller_2, eaglekiller_3, eaglekiller_4, eaglekiller_5, eaglekiller_6],
     },
     {
       id: 4,
@@ -62,7 +81,7 @@ export function Projects() {
       tecnologias: ["GameMaker: Studio 1.4", "GameMaker 2025"],
       url: "https://redviewstudio.itch.io/core",
       image: gm2Image,
-      screenshots: [],
+      screenshots: [core_1, core_2, core_3, core_4, core_5],
     },
     {
       id: 5,
@@ -80,7 +99,7 @@ export function Projects() {
       tecnologias: ["MS SQL Server 2022", "C#", ".NET 8 Web Api", "ReactJS", "Material UI", "Toolpad", "Docker"],
       url: "https://github.com/alkemyTech/CFITDF-NetReact-W2-Back-S1",
       image: digitalArsImage,
-      screenshots: [],
+      screenshots: [digitalars_1, digitalars_2],
     },
     {
       id: 7,

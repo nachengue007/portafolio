@@ -96,6 +96,11 @@ export function Dialog({ n }: DialogProps ) {
                   />
                 </AnimatePresence>
               </div>
+
+              <span className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/50 text-white px-2 py-1 rounded text-sm">
+                {`${galleryState.index + 1} / ${n.screenshots.length}`}
+              </span>
+
               {n.screenshots.length > 1 && (
                 <>
                   <button
