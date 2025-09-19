@@ -41,12 +41,12 @@ export function Dialog({ n }: DialogProps ) {
 
   return <>
     <motion.button
-      whileHover={{ scale: 1.075 }}
-      whileTap={{ scale: 0.75 }}
+      whileHover={{ scale: 1.045 }}
+      whileTap={{ scale: 0.9 }}
       className="pb-8" 
       onClick={() => setOpen(true)}
     >
-      <div className="max-w-sm rounded-lg transition-colors duration-200 text-white bg-darkpurple-700 hover:text-darkpurple-800 hover:bg-darkpurple-400">
+      <div className="max-w-sm rounded-lg transition-colors transition-shadow duration-200 text-white bg-darkpurple-700 shadow-darkpurple-light hover:shadow-lg hover:text-darkpurple-800 hover:bg-darkpurple-400">
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
             <span className="font-bold text-xl">{n.nombre}</span>
@@ -75,7 +75,7 @@ export function Dialog({ n }: DialogProps ) {
         >
           <div>
             <div className="pb-2 text-2xl font-bold text-white text-center">{n.nombre}</div>
-            <p className="pb-2 text-darkpurple-600 text-sm text-base">
+            <p className="pb-2 text-white text-sm text-base">
               {n.descripcion}
             </p>
           </div>

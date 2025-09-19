@@ -12,6 +12,7 @@ import linkedinLogo from './assets/redes/LinkedIn_logo.png';
 import githubLogo from './assets/redes/github_logo.png';
 import gitlabLogo from './assets/redes/gitlab_logo.png';
 import youtubeLogo from './assets/redes/Youtube_logo.png';
+import emailLogo from './assets/redes/email_logo.png';
 
 type nombres = 'about' | 'skills' | 'projects' | 'education' | 'aboutPortafolio';
 
@@ -23,11 +24,11 @@ function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const widthMap: Record<nombres, number> = {
-    'about': 105,
-    'skills': 95,
-    'projects': 100,
-    'education': 60,
-    'aboutPortafolio': 60,
+    'about': 108,
+    'skills': 98,
+    'projects': 105,
+    'education': 65,
+    'aboutPortafolio': 62,
   };
 
   useEffect(() => {
@@ -97,6 +98,11 @@ function App() {
       url: "https://www.youtube.com/@murdocc9",
       image: youtubeLogo,
     },
+    {
+      nombre: "Email Personal",
+      url: "mailto:fonsecaignacio139@gmail.com",
+      image: emailLogo,
+    },
   ]
 
   return <>
@@ -129,6 +135,13 @@ function App() {
             {renderButton('projects', 'Proyectos')}
             {renderButton('education', 'Experiencia/Estudios')}
             {renderButton('aboutPortafolio', 'Sobre este portafolio')}
+            <div className='hidden md:flex justify-center items-center p-2'>
+              {redes.map((e: any, i: Key) => (
+                <a key={i} className='pr-2' href={e.url} target='_blank'>
+                  <img src={e.image} alt={e.nombre} className="w-10 h-10 object-contain"/>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -149,9 +162,11 @@ function App() {
         </AnimatePresence>
       </div>
 
-      <div className='flex p-2 bg-darkpurple-800 md:w-2/6 md:absolute md:inset-x-1 md:bottom-0'>
+      <div className='md:hidden flex justify-center items-center p-2 bg-darkpurple-800 md:w-2/6 md:absolute md:inset-x-1 md:bottom-0'>
         {redes.map((e: any, i: Key) => (
-          <a key={i} className='pr-2' href={e.url} target='_blank'><img src={e.image} alt={e.nombre} className="w-10 h-10 object-contain"/></a>
+          <a key={i} className='pr-2' href={e.url} target='_blank'>
+            <img src={e.image} alt={e.nombre} className="w-10 h-10 object-contain"/>
+          </a>
         ))}
       </div>
     </div>

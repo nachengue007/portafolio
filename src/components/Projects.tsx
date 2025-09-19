@@ -36,6 +36,27 @@ import eaglekiller_4 from "../assets/proyectos/screenshots/eaglekiller/eaglekill
 import eaglekiller_5 from "../assets/proyectos/screenshots/eaglekiller/eaglekiller_5.png";
 import eaglekiller_6 from "../assets/proyectos/screenshots/eaglekiller/eaglekiller_6.png";
 
+// gestion_proyectos
+import gestion_proyectos_1 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_1.png";
+import gestion_proyectos_2 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_2.png";
+import gestion_proyectos_3 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_3.png";
+import gestion_proyectos_4 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_4.png";
+import gestion_proyectos_5 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_5.png";
+import gestion_proyectos_6 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_6.png";
+import gestion_proyectos_7 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_7.png";
+import gestion_proyectos_8 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_8.png";
+import gestion_proyectos_9 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_9.png";
+import gestion_proyectos_10 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_10.png";
+import gestion_proyectos_11 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_11.png";
+import gestion_proyectos_12 from "../assets/proyectos/screenshots/gestion_proyectos/gestion_proyectos_12.png";
+
+// run
+import run_1 from "../assets/proyectos/screenshots/run/run_1.jpg";
+import run_2 from "../assets/proyectos/screenshots/run/run_2.jpg";
+import run_3 from "../assets/proyectos/screenshots/run/run_3.jpg";
+import run_4 from "../assets/proyectos/screenshots/run/run_4.jpg";
+import run_5 from "../assets/proyectos/screenshots/run/run_5.jpg";
+
 export function Projects() {
   const proyectos = [
     {
@@ -63,7 +84,7 @@ export function Projects() {
       tecnologias: ["GameMaker: Studio 1.4"],
       url: "https://redviewstudio.itch.io/run",
       image: gms14Image,
-      screenshots: [],
+      screenshots: [run_1, run_2, run_3, run_4, run_5],
     },
     {
       id: 3,
@@ -103,16 +124,16 @@ export function Projects() {
     },
     {
       id: 7,
-      nombre: "gestion_proyectos",
+      nombre: "gestion_proyectos_vuedjango",
       descripcion: "Este es un sistema donde podrás gestionar tus proyectos de forma eficiente. Podrás crear, ver, actualizar y eliminar proyectos, tareas y miembros del equipo. También se pueden agregar comentarios para facilitar el progreso de cada proyecto.",
       tecnologias: ["PostgreSQL", "Django", "Django RestFramework", "Axios", "VueJS", "Vuetify", "Tailwind CSS 4", "Docker"],
-      url: "",
+      url: "https://gitlab.com/laboratorio4-5834/gestion_proyectos",
       image: vuetifyImage,
-      screenshots: [],
+      screenshots: [gestion_proyectos_1, gestion_proyectos_2, gestion_proyectos_3, gestion_proyectos_4, gestion_proyectos_5, gestion_proyectos_6, gestion_proyectos_7, gestion_proyectos_8, gestion_proyectos_9, gestion_proyectos_10, gestion_proyectos_11, gestion_proyectos_12],
     },
   ];
 
-  return <div className="flex flex-col md:justify-center md:h-screen">
+  return <div className="pl-2 flex flex-col md:justify-center md:h-screen">
     <div className="p-4 grid grid-cols-1 md:grid-cols-3">
       {proyectos.map((p) => (
         <Dialog key={p.id} n={p} />
