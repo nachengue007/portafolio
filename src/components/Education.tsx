@@ -14,7 +14,7 @@ export function Education(){
     {
       nombre: "Universidad Tecnológica Nacional (UTN)",
       titulo: "Tecnicatura Universitaria en Programación",
-      duracion: "2021 - 2025",
+      duracion: "2021 - Actualidad",
       descripcion: "Formación universitaria orientada al desarrollo de software, con énfasis en programación estructurada y orientada a objetos, bases de datos y frameworks modernos para aplicaciones web y de escritorio.",
       aptitudes: ["C/C++", "Java", "Python", "HTML", "jQuery", "SQL", "MySQL", "PhpMyAdmin", "PHP", "Django", "Django REST Framework", "Node.js", "Vue.js", "Docker"]
     },
