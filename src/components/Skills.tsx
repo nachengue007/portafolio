@@ -1,3 +1,6 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+
 export function Skills() {
   const apartados = [
     {
@@ -50,21 +53,67 @@ export function Skills() {
       titulo: "Idiomas",
       items: [
         "Inglés: Escrito Intermedio, Oral Básico",
-        "Español: Escrito y Oral Nativo",
       ]
     },
   ];
+  
+  const [hoveredId, setHoveredId] = useState(null);
+  
+  const listVariants = {
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        when: "afterChildren"
+      }
+    },
+    open: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.3,
+        when: "beforeChildren"
+      }
+    }
+  };
+  
+  const listItemVariants = {
+    closed: { opacity: 0, x: -20 },
+    open: { opacity: 1, x: 0 }
+  };
 
-  return <div className='md:flex p-4 text-white items-center justify-center min-h-screen'>
-    {apartados.map((a: any) => (
-      <div className="md:w-1/4" key={a.id}>
-        <h1 className="pb-2 font-bold text-2xl text-white">{a.titulo}</h1>
-        <ul className="pl-2 text-darkpurple-400">
-          {a.items.map((p: String) => (
-            <li>{'->'} {p}</li>
-          ))}
-        </ul>
+  return <div className='md:flex md:flex-col text-white items-center justify-center min-h-screen'>
+      <div className='grid md:grid-cols-2'>
+        {apartados.map((a: any) => (
+          <div
+            className='p-4 md:w-128'
+            key={a.id}
+            onMouseEnter={() => setHoveredId(a.id)}
+            onMouseLeave={() => setHoveredId(null)}
+          >
+            <div className="p-4 rounded bg-darkpurple-700 overflow-hidden">
+              <h1 className="pb-2 font-bold text-2xl text-white">{a.titulo}</h1>
+              <AnimatePresence>
+                {hoveredId === a.id && (
+                  <motion.ul
+                    className="pl-6 list-disc text-white"
+                    variants={listVariants}
+                    initial="closed"
+                    animate="open"
+                    exit="closed"
+                  >
+                    {a.items.map((p: String) => (
+                      <motion.li key={p.toString()} variants={listItemVariants}>
+                        {p}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
+    </div>
 }

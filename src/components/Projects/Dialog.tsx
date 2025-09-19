@@ -46,7 +46,7 @@ export function Dialog({ n }: DialogProps ) {
       className="pb-8" 
       onClick={() => setOpen(true)}
     >
-      <div className="max-w-sm rounded-lg transition-colors transition-shadow duration-200 text-white bg-darkpurple-700 shadow-darkpurple-light hover:shadow-lg hover:text-darkpurple-800 hover:bg-darkpurple-400">
+      <div className="max-w-sm rounded-lg transition-colors duration-200 text-white bg-darkpurple-700 hover:text-darkpurple-800 hover:bg-darkpurple-400">
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
             <span className="font-bold text-xl">{n.nombre}</span>
