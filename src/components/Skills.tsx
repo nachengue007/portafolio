@@ -89,7 +89,7 @@ export function Skills() {
       <div className='grid md:grid-cols-2'>
         {apartados.map((a: any) => (
           <div
-            className='p-4 w-100 2xl:w-150'
+            className='p-4 2xl:w-150'
             key={a.id}
             onMouseEnter={() => setHoveredId(a.id)}
             onMouseLeave={() => setHoveredId(null)}
