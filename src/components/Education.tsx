@@ -3,6 +3,13 @@ import type { Key } from "react";
 export function Education(){
   const experiencia = [
     {
+      nombre: "Freelance",
+      titulo: "Profesor Particular de Programación",
+      duracion: "Octubre 2025 - Actualidad",
+      descripcion: "Doy clases particulares a gente que estudia programación y necesitan reforzar, ya sea en nivel secundario como nivel universitario.",
+      aptitudes: ["Python"]
+    },
+    {
       nombre: "Instituto Provincial de Educación Superior (IPES)",
       titulo: "Desarrollador FullStack",
       duracion: "Febrero 2025 - Actualidad",
@@ -15,6 +22,7 @@ export function Education(){
       nombre: "Universidad Tecnológica Nacional (UTN)",
       titulo: "Tecnicatura Universitaria en Programación",
       duracion: "Abril 2021 - Octubre 2025",
+      estado: "Completado",
       descripcion: "Formación universitaria orientada al desarrollo de software, con énfasis en programación estructurada y orientada a objetos, bases de datos y frameworks modernos para aplicaciones web y de escritorio.",
       aptitudes: ["C/C++", "Java", "Python", "HTML", "jQuery", "SQL", "MySQL", "PhpMyAdmin", "PHP", "Django", "Django REST Framework", "Node.js", "Vue.js", "Docker"]
     },
@@ -22,6 +30,7 @@ export function Education(){
       nombre: "Alkemy",
       titulo: "Programador en .NET + React",
       duracion: "Marzo 2025 - Junio 2025",
+      estado: "Completado",
       descripcion: "Entrenamiento intensivo enfocado en el desarrollo de aplicaciones web con tecnologías Microsoft y frontend moderno, combinando .NET y React para proyectos colaborativos con metodologías ágiles.",
       aptitudes: ["Microsoft SQL Server", "SQL Server Management Studio", "Visual Studio", ".NET Framework", "ASP.NET", "Reactjs"]
     },
@@ -29,6 +38,7 @@ export function Education(){
       nombre: "Centro Politécnico Malvinas Argentinas",
       titulo: "Tecnicatura Universitaria en Ciencias de Datos e Inteligencia Artificial",
       duracion: "Agosto 2023 - Diciembre 2023",
+      estado: "Abandonado",
       descripcion: "Estudios en análisis de datos, estadística aplicada e introducción a la inteligencia artificial, con herramientas de programación y gestión de bases de datos. (Carrera pausada, plan de retomar en 2026).",
       aptitudes: ["Python", "Oracle SQL Developer", "InfoStat", "Prolog"]
     },
@@ -36,6 +46,7 @@ export function Education(){
       nombre: "Fundación Mirgor",
       titulo: "Curso Básico Inicial de Operario de Producción (Fabrica)",
       duracion: "Marzo 2023 - Abril 2023",
+      estado: "Completado",
       descripcion: "Capacitación en procesos productivos industriales, gestión de calidad y seguridad ocupacional, aplicando metodologías de mejora continua y prácticas de producción eficientes.",
       aptitudes: ["Sistemas de Gestión Ambiental", "Sistemas de Calidad", "Sistemas de Producción", "Seguridad y Salud Ocupacional (OHS)", "5S"]
     },
@@ -43,6 +54,7 @@ export function Education(){
       nombre: "freeCodeCamp",
       titulo: "Curso HTML y CSS",
       duracion: "2020 - 2020",
+      estado: "Completado",
       descripcion: "Curso online orientado al diseño y maquetación de páginas web utilizando estándares modernos de HTML y CSS, con enfoque en buenas prácticas y responsividad.",
       aptitudes: ["HTML", "CSS"]
     },
@@ -50,6 +62,7 @@ export function Education(){
       nombre: "SoloLearn",
       titulo: "Curso HTML",
       duracion: "2018 - 2018",
+      estado: "Completado",
       descripcion: "Curso introductorio en desarrollo web con HTML, adquiriendo las bases para la estructuración de documentos y creación de sitios estáticos.",
       aptitudes: ["HTML"]
     },
@@ -83,6 +96,7 @@ export function Education(){
       <div className="md:flex pb-8" key={i}>
         <div className="md:w-1/4 md:pr-4 md:flex md:flex-col items-end">
           <h3 className="text-xl text-darkpurple-500">{e.duracion}</h3>
+          <h3 className="text-l text-darkpurple-500">{e.estado}</h3>
         </div>
 
         <div className="md:w-3/4 md:pl-2">
