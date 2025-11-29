@@ -131,6 +131,15 @@ export function Projects() {
       image: vuetifyImage,
       screenshots: [gestion_proyectos_1, gestion_proyectos_2, gestion_proyectos_3, gestion_proyectos_4, gestion_proyectos_5, gestion_proyectos_6, gestion_proyectos_7, gestion_proyectos_8, gestion_proyectos_9, gestion_proyectos_10, gestion_proyectos_11, gestion_proyectos_12],
     },
+    {
+      id: 8,
+      nombre: "LocalBox",
+      descripcion: "Es un sistema de almacenamiento para poder crear y gestionar tu propio servidor NAS. Donde podes guardar, eliminar y descargar archivos, tener multiples usuarios y compartir dentro de la red tus archivos, ya sean a usuarios en especifico como a todos los que esten registrados.",
+      tecnologias: ["PostgreSQL", "C#", "ASP.NET", "TypeScript", "ReactJS", "Axios", "Tailwind CSS 4"],
+      url: "",
+      image: vuetifyImage,
+      screenshots: [],
+    },
   ];
 
   return <div className="pl-2 flex flex-col md:justify-center md:h-screen">
