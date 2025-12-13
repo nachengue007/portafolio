@@ -7,6 +7,7 @@ import gm2Image from "../assets/proyectos/iconos/gm2.webp";
 import stockifyImage from "../assets/proyectos/iconos/stockify.png";
 import digitalArsImage from "../assets/proyectos/iconos/digitalArs.svg";
 import vuetifyImage from "../assets/proyectos/iconos/vuetify.ico";
+import netcoreImage from "../assets/proyectos/iconos/netcore.png";
 
 /// screenshots 
 // stokify
@@ -137,7 +138,7 @@ export function Projects() {
       descripcion: "Es un sistema de almacenamiento para poder crear y gestionar tu propio servidor NAS. Donde podes guardar, eliminar y descargar archivos, tener multiples usuarios y compartir dentro de la red tus archivos, ya sean a usuarios en especifico como a todos los que esten registrados.",
       tecnologias: ["PostgreSQL", "C#", "ASP.NET", "TypeScript", "ReactJS", "Axios", "Tailwind CSS 4"],
       url: "",
-      image: vuetifyImage,
+      image: netcoreImage,
       screenshots: [],
     },
   ];
