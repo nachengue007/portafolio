@@ -12,8 +12,8 @@ export function Education(){
     {
       nombre: "Instituto Provincial de Educación Superior (IPES)",
       titulo: "Desarrollador FullStack",
-      duracion: "Febrero 2025 - Actualidad",
-      descripcion: "Estamos desarrollando un sistema académico integral como proyecto FullStack, diseñado para optimizar la gestión de información dentro de una universidad. El sistema se divide en dos módulos principales: uno dirigido al personal administrativo y docente, y otro destinado a los alumnos.",
+      duracion: "Febrero 2025 - Diciembre 2025",
+      descripcion: "Estuvimos desarrollando un sistema académico integral como proyecto FullStack, diseñado para optimizar la gestión de información dentro de una universidad. El sistema se divide en dos módulos principales: uno dirigido al personal administrativo y docente, y otro destinado a los alumnos.",
       aptitudes: ["PostgreSQL", "TypeScript", "NextJS", "ReactJS", "Shadcn"]
     },
   ];
