@@ -1,6 +1,7 @@
 import './App.css'
 import { useEffect, useState, type Key } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Tooltip } from 'react-tooltip';
 
 import { About } from './components/About';
 import { Skills } from './components/Skills';
@@ -138,7 +139,10 @@ function App() {
             <div className='hidden md:flex justify-center items-center p-2'>
               {redes.map((e: any, i: Key) => (
                 <a key={i} className='pr-2' href={e.url} target='_blank'>
-                  <img src={e.image} alt={e.nombre} className="w-10 h-10 object-contain"/>
+                  <a data-tooltip-id="tooltip" data-tooltip-content={e.nombre}>
+                    <img src={e.image} alt={e.nombre} className="w-10 h-10 object-contain"/>
+                  </a>
+                  <Tooltip id="tooltip"/>
                 </a>
               ))}
             </div>
