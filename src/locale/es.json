@@ -41,6 +41,10 @@
       "text5": "Siempre busco <b>aprender nuevas tecnologías</b>, experimentar con <b>proyectos innovadores</b> y mejorar mis habilidades resolviendo <b>retos de programación y algoritmos</b>."
     },
     "skills": {
+      "programming": "Programación",
+      "office": "Ofimática",
+      "other": "Otros conocimientos",
+      "lang": "Idiomas",
       "basic": "Básico",
       "intermediate": "Intermedio",
       "advanced": "Avanzado",
