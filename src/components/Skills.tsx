@@ -1,60 +1,64 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function Skills() {
+  const { t } = useTranslation();
+  
   const apartados = [
     {
       id: 0,
       titulo: "Programación",
       items: [
-        "C/C++ - Intermedio",
-        "C# - Intermedio",
-        ".NET 8 Web Api - Intermedio",
-        "Java - Intermedio",
-        "JavaScript - Intermedio",
-        "PHP - Intermedio",
-        "Python - Intermedio",
-        "SQL - Intermedio",
-        "CSS3 - Básico",
-        "MS SQL Server 2022 - Intermedio",
-        "MySQL - Básico",
-        "PostgreSQL - Intermedio",
-        "GameMaker: Studio 1.4 - Avanzado",
-        "GameMaker 2025 - Intermedio",
-        "React - Intermedio",
-        "Tailwind CSS - Básico",
-        "Django - Básico",
-        "Next.js - Intermedio",
-        "Docker - Básico",
+        `C/C++ - ${t('skills.intermediate')}`,
+        `C# - ${t('skills.intermediate')}`,
+        `.NET 8 Web Api - ${t('skills.intermediate')}`,
+        `Java - ${t('skills.intermediate')}`,
+        `JavaScript - ${t('skills.intermediate')}`,
+        `PHP - ${t('skills.intermediate')}`,
+        `Python - ${t('skills.intermediate')}`,
+        `SQL - ${t('skills.intermediate')}`,
+        `CSS3 - ${t('skills.basic')}`,
+        `MS SQL Server 2022 - ${t('skills.intermediate')}`,
+        `MySQL - ${t('skills.basic')}`,
+        `PostgreSQL - ${t('skills.intermediate')}`,
+        `GameMaker: Studio 1.4 - ${t('skills.advanced')}`,
+        `GameMaker 2025 - ${t('skills.intermediate')}`,
+        `React - ${t('skills.intermediate')}`,
+        `Tailwind CSS - ${t('skills.basic')}`,
+        `Django - ${t('skills.basic')}`,
+        `Next.js - ${t('skills.intermediate')}`,
+        `Docker - ${t('skills.basic')}`,
       ]
     },
     {
       id: 1,
       titulo: "Ofimática",
       items: [
-        "Microsoft Excel - Intermedio",
-        "Microsoft Word - Intermedio",
-        "Microsoft PowerPoint - Intermedio",
-        "LibreOffice Calc - Intermedio",
-        "LibreOffice Write - Intermedio",
+        `Microsoft Excel - ${t('skills.intermediate')}`,
+        `Microsoft Word - ${t('skills.intermediate')}`,
+        `Microsoft PowerPoint - ${t('skills.intermediate')}`,
+        `LibreOffice Calc - ${t('skills.intermediate')}`,
+        `LibreOffice Write - ${t('skills.intermediate')}`,
       ]
     },
     {
       id: 2,
       titulo: "Otros conocimientos",
       items: [
-        "SAP - Básico",
-        "Inglés técnico - Intermedio",
-        "Reparación de PC y compatibilidad - Intermedio",
-        "Reparación de placas electronicas - Básico",
+        `SAP - ${t('skills.basic')}`,
+        `${t('skills.english_tech')} - ${t('skills.intermediate')}`,
+        `${t('skills.pc')} - ${t('skills.intermediate')}`,
+        `${t('skills.boards')} - ${t('skills.basic')}`,
       ]
     },
     {
       id: 3,
       titulo: "Idiomas",
       items: [
-        "Inglés: Escrito Intermedio, Oral Básico",
-        "Alemán: Aprendiendo",
+        `${t('skills.spanish')}`,
+        `${t('skills.english')}`,
+        `${t('skills.german')}`,
       ]
     },
   ];

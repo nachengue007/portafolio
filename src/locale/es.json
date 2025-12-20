@@ -1,0 +1,147 @@
+{
+  "translation": {
+    "global":{
+      "close": "Cerrar"
+    },
+    "month": {
+      "jan": "Enero",
+      "feb": "Febrero",
+      "mar": "Marzo",
+      "apr": "Abril",
+      "may": "Mayo",
+      "jun": "Junio",
+      "jul": "Julio",
+      "aug": "Agosto",
+      "sep": "Septiembre",
+      "oct": "Octubre",
+      "nov": "Noviembre",
+      "dec": "Diciembre",
+      "cur": "Actualmente"
+    },
+    "navbar": { 
+      "about": "Sobre Mi", 
+      "skills": "Habilidades", 
+      "projects": "Proyectos", 
+      "education": "Experiencia/Educacion", 
+      "aboutPortafolio": "Sobre este portafolio", 
+      "title": "Desarrollador FullStack de Aplicaciones Web",
+      "socials": {
+        "linkedin": "Mi Linkedin",
+        "github": "Mis repositorios de GitHub",
+        "gitlab": "Mis otros repositorios de GitLab",
+        "youtube": "Mi canal de Youtube",
+        "email": "Mi email para contacto"
+      }
+    },
+    "about": {
+      "text1": "Hola, soy <b>Ignacio Fonseca</b>, un <b>Fullstack Developer en formación</b>. Actualmente trabajo con <b>Next.js y React</b>, y por mi cuenta estoy aprendiendo <b>ASP.NET</b> para fortalecer mis habilidades en el backend.",
+      "text2": "Me apasiona más la programación del lado del <b>servidor y los algoritmos</b>.",
+      "text3": "He desarrollado varios <b>proyectos personales</b> que incluyen aplicaciones web y pequeños videojuegos, lo que me ha permitido aplicar mis conocimientos en <b>React, bases de datos y lógica de programación</b> en entornos reales.",
+      "text4": "Fuera del mundo del código, disfruto tanto de los <b>videojuegos y juegos de mesa</b> como de <b>crear mis propios videojuegos</b> usando <b>GameMaker Studio 1.4</b>, combinando creatividad y lógica en proyectos divertidos y desafiantes.",
+      "text5": "Siempre busco <b>aprender nuevas tecnologías</b>, experimentar con <b>proyectos innovadores</b> y mejorar mis habilidades resolviendo <b>retos de programación y algoritmos</b>."
+    },
+    "skills": {
+      "basic": "Básico",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado",
+      "english_tech": "Inglés técnico",
+      "pc": "Reparación de PC y compatibilidad",
+      "boards": "Reparación de placas electronicas",
+      "spanish": "Español: Escrito Nativo, Oral Nativo",
+      "english": "Inglés: Escrito Intermedio, Oral Básico",
+      "german": "Alemán: Aprendiendo"
+    },
+    "project": {
+      "go": "Ir al proyecto",
+      "cs": "Proximamente",
+      "project1":{
+        "name": "Mundo Matriz",
+        "description": "Es un programa de consola para el calculo de matrices, fue una de los primeros acercamientos a C++"
+      },
+      "project2":{
+        "name": "EncryptFons",
+        "description": "Es un programa de consola donde estaba probando el uso de punteros y lectura de memoria."
+      },
+      "project3":{
+        "name": "Run",
+        "description": "Es un juego que hice probando las funciones 3D de GameMaker: Studio 1.4"
+      },
+      "project4":{
+        "name": "Eagle Killer",
+        "description": "Es un clon de Wolfenstein 3D que hice en GameMaker: Studio 1.4 para probar el uso del RayCasting, en un principio empezo siendo un juego para la Global Game Jam 2021 pero segui con el desarrollo."
+      },
+      "project5":{
+        "name": "core",
+        "description": "Es un shooter básico y sencillo probando la generación semillas y uso de numeros pseudo-aleatorios"
+      },
+      "project6":{
+        "name": "Stockify",
+        "description": "Un sistema de inventario sencillo para eCommers donde se puede registrar, actualizar y eliminar Productos y, el contacto de los Proveedores para saber el origen de los Productos."
+      },
+      "project7":{
+        "name": "DigitalArs Wallet",
+        "description": "Es una billetera virtual que hicimos con un equipo para el curso de .NET/React de Alkemy como proyecto final de cursada."
+      },
+      "project8":{
+        "name": "gestion proyectos vuedjango",
+        "description": "Este es un sistema donde podrás gestionar tus proyectos de forma eficiente. Podrás crear, ver, actualizar y eliminar proyectos, tareas y miembros del equipo. También se pueden agregar comentarios para facilitar el progreso de cada proyecto."
+      },
+      "project9":{
+        "name": "LocalBox",
+        "description": "Es un sistema de almacenamiento para poder crear y gestionar tu propio servidor NAS. Donde podes guardar, eliminar y descargar archivos, tener multiples usuarios y compartir dentro de la red tus archivos, ya sean a usuarios en especifico como a todos los que esten registrados."
+      }
+    },
+    "education": {
+      "status_complete": "Completado",
+      "status_abandoned": "Abandonado",
+      "education": "Estudios",
+      "experience": "Experiencia",
+      "job1": {
+        "name": "Instituto Provincial de Educación Superior (IPES)",
+        "title": "Desarrollador FullStack en NextJS con ReactJS",
+        "description": "Estuvimos desarrollando un sistema académico integral como proyecto FullStack, diseñado para optimizar la gestión de información dentro de una universidad. El sistema se divide en dos módulos principales: uno dirigido al personal administrativo y docente, y otro destinado a los alumnos."
+      },
+      "job2": {
+        "name": "Freelance/Independiente",
+        "title": "Profesor Particular de Programación",
+        "description": "Doy clases particulares a gente que estudia programación y necesitan reforzar, ya sea en nivel secundario como nivel universitario."
+      },
+      "education1": {
+        "name": "SoloLearn",
+        "title": "Curso HTML",
+        "description": "Curso introductorio en desarrollo web con HTML, adquiriendo las bases para la estructuración de documentos y creación de sitios estáticos."
+      },
+      "education2": {
+        "name": "freeCodeCamp",
+        "title": "Curso HTML y CSS",
+        "description": "Curso online orientado al diseño y maquetación de páginas web utilizando estándares modernos de HTML y CSS, con enfoque en buenas prácticas y responsividad."
+      },
+      "education3": {
+        "name": "Fundación Mirgor",
+        "title": "Curso Básico Inicial de Operario de Producción (Fabrica)",
+        "description": "Capacitación en procesos productivos industriales, gestión de calidad y seguridad ocupacional, aplicando metodologías de mejora continua y prácticas de producción eficientes."
+      },
+      "education4": {
+        "name": "Centro Politécnico Malvinas Argentinas",
+        "title": "Tecnicatura Universitaria en Ciencias de Datos e Inteligencia Artificial",
+        "description": "Estudios en análisis de datos, estadística aplicada e introducción a la inteligencia artificial, con herramientas de programación y gestión de bases de datos. (Carrera pausada, plan de retomar en 2026)."
+      },
+      "education5": {
+        "name": "Alkemy",
+        "title": "Programador en .NET + React",
+        "description": "Entrenamiento intensivo enfocado en el desarrollo de aplicaciones web con tecnologías Microsoft y frontend moderno, combinando .NET y React para proyectos colaborativos con metodologías ágiles."
+      },
+      "education6": {
+        "name": "Facultad Regional - Universidad Tecnológica Nacional (FRTDF)",
+        "title": "Tecnicatura Universitaria en Programación",
+        "description": "Formación universitaria orientada al desarrollo de software, con énfasis en programación estructurada y orientada a objetos, bases de datos y frameworks modernos para aplicaciones web y de escritorio."
+      }
+    },
+    "aboutPortafolio":{
+      "text1": "Este portafolio está desarrollado con <b>ReactJS, TypeScript y TailwindCSS 4</b>.",
+      "text2": "Mi objetivo con este proyecto es mostrar mi estilo de trabajo y mis habilidades en el desarrollo frontend, creando interfaces <b>modernas, funcionales y optimizadas</b>.",
+      "text3": "A través de este portafolio busco reflejar no solo mi conocimiento técnico, sino también mi pasión por la programación, mi atención al detalle y mi compromiso con escribir <b>código limpio y escalable</b>, aplicando buenas prácticas en cada etapa del desarrollo.",
+      "text4": "Es también una representación de mi constante aprendizaje y mi motivación por crecer como profesional, <b>explorando nuevas tecnologías y desafiándome con cada proyecto</b>."
+    }
+  }
+}

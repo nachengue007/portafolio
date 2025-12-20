@@ -57,13 +57,16 @@ import run_2 from "../assets/proyectos/screenshots/run/run_2.jpg";
 import run_3 from "../assets/proyectos/screenshots/run/run_3.jpg";
 import run_4 from "../assets/proyectos/screenshots/run/run_4.jpg";
 import run_5 from "../assets/proyectos/screenshots/run/run_5.jpg";
+import { useTranslation } from "react-i18next";
 
 export function Projects() {
+  const { t } = useTranslation();
+
   const proyectos = [
     {
       id: 0,
-      nombre: "Mundo Matriz",
-      descripcion: "Es un programa de consola para el calculo de matrices, fue una de los primeros acercamientos a C++",
+      nombre: t('project.project1.name'),
+      descripcion: t('project.project1.description'),
       tecnologias: ["C++"],
       url: "https://github.com/nachengue007/mundo-matriz",
       image: terminalImage,
@@ -71,8 +74,8 @@ export function Projects() {
     },
     {
       id: 1,
-      nombre: "EncryptFons",
-      descripcion: "Es un programa de consola donde estaba probando el uso de punteros y lectura de memoria.",
+      nombre: t('project.project2.name'),
+      descripcion: t('project.project2.description'),
       tecnologias: ["C++"],
       url: "https://github.com/nachengue007/EncryptFons",
       image: terminalImage,
@@ -80,8 +83,8 @@ export function Projects() {
     },
     {
       id: 2,
-      nombre: "Run",
-      descripcion: "Es un juego que hice probando las funciones 3D de GameMaker: Studio 1.4",
+      nombre: t('project.project3.name'),
+      descripcion: t('project.project3.description'),
       tecnologias: ["GameMaker: Studio 1.4"],
       url: "https://redviewstudio.itch.io/run",
       image: gms14Image,
@@ -89,8 +92,8 @@ export function Projects() {
     },
     {
       id: 3,
-      nombre: "Eagle Killer",
-      descripcion: "Es un clon de Wolfenstein 3D que hice en GameMaker: Studio 1.4 para probar el uso del RayCasting, en un principio empezo siendo un juego para la Global Game Jam 2021 pero segui con el desarrollo.",
+      nombre: t('project.project4.name'),
+      descripcion: t('project.project4.description'),
       tecnologias: ["GameMaker: Studio 1.4"],
       url: "https://redviewstudio.itch.io/eaglekiller",
       image: gms14Image,
@@ -98,8 +101,8 @@ export function Projects() {
     },
     {
       id: 4,
-      nombre: "core",
-      descripcion: "Es un shooter básico y sencillo probando la generación semillas y uso de numeros pseudo-aleatorios",
+      nombre: t('project.project5.name'),
+      descripcion: t('project.project5.description'),
       tecnologias: ["GameMaker: Studio 1.4", "GameMaker 2025"],
       url: "https://redviewstudio.itch.io/core",
       image: gm2Image,
@@ -107,8 +110,8 @@ export function Projects() {
     },
     {
       id: 5,
-      nombre: "Stockify",
-      descripcion: "Un sistema de inventario sencillo para eCommers donde se puede registrar, actualizar y eliminar Productos y, el contacto de los Proveedores para saber el origen de los Productos.",
+      nombre: t('project.project6.name'),
+      descripcion: t('project.project6.description'),
       tecnologias: ["SQLite", "Django", "Django RestFramework", "ReactJs", "Tailwind CSS 3"],
       url: "",
       image: stockifyImage,
@@ -116,8 +119,8 @@ export function Projects() {
     },
     {
       id: 6,
-      nombre: "DigitalArs Wallet",
-      descripcion: "Es una billetera virtual que hicimos con un equipo para el curso de .NET/React de Alkemy como proyecto final de cursada.",
+      nombre: t('project.project7.name'),
+      descripcion: t('project.project7.description'),
       tecnologias: ["MS SQL Server 2022", "C#", ".NET 8 Web Api", "ReactJS", "Material UI", "Toolpad", "Docker"],
       url: "https://github.com/alkemyTech/CFITDF-NetReact-W2-Back-S1",
       image: digitalArsImage,
@@ -125,8 +128,8 @@ export function Projects() {
     },
     {
       id: 7,
-      nombre: "gestion_proyectos_vuedjango",
-      descripcion: "Este es un sistema donde podrás gestionar tus proyectos de forma eficiente. Podrás crear, ver, actualizar y eliminar proyectos, tareas y miembros del equipo. También se pueden agregar comentarios para facilitar el progreso de cada proyecto.",
+      nombre: t('project.project8.name'),
+      descripcion: t('project.project8.description'),
       tecnologias: ["PostgreSQL", "Django", "Django RestFramework", "Axios", "VueJS", "Vuetify", "Tailwind CSS 4", "Docker"],
       url: "https://gitlab.com/laboratorio4-5834/gestion_proyectos",
       image: vuetifyImage,
@@ -134,8 +137,8 @@ export function Projects() {
     },
     {
       id: 8,
-      nombre: "LocalBox",
-      descripcion: "Es un sistema de almacenamiento para poder crear y gestionar tu propio servidor NAS. Donde podes guardar, eliminar y descargar archivos, tener multiples usuarios y compartir dentro de la red tus archivos, ya sean a usuarios en especifico como a todos los que esten registrados.",
+      nombre: t('project.project9.name'),
+      descripcion: t('project.project9.description'),
       tecnologias: ["PostgreSQL", "C#", "ASP.NET", "TypeScript", "ReactJS", "Axios", "Tailwind CSS 4"],
       url: "",
       image: netcoreImage,

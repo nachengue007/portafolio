@@ -15,6 +15,8 @@ import gitlabLogo from './assets/redes/gitlab_logo.png';
 import youtubeLogo from './assets/redes/Youtube_logo.png';
 import emailLogo from './assets/redes/email_logo.png';
 
+import { useTranslation } from 'react-i18next';
+
 type nombres = 'about' | 'skills' | 'projects' | 'education' | 'aboutPortafolio';
 
 function App() {
@@ -24,13 +26,36 @@ function App() {
   
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const widthMap: Record<nombres, number> = {
-    'about': 108,
-    'skills': 98,
-    'projects': 105,
-    'education': 65,
-    'aboutPortafolio': 62,
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    document.documentElement.lang = lang;
+  }
+
+  const lenguajes = [
+    { code: "es", name: "Español", flag: "🇦🇷" },
+    { code: "en", name: "English", flag: "🇺🇸" },
+  ]
+
+  const widthMapByLang: Record<string, Record<nombres, number>> = {
+    es: {
+      about: 108,
+      skills: 98,
+      projects: 105,
+      education: 58,
+      aboutPortafolio: 62,
+    },
+    en: {
+      about: 105,
+      skills: 120,
+      projects: 110,
+      education: 58,
+      aboutPortafolio: 68,
+    }
   };
+
+  const widthMap = widthMapByLang[document.documentElement.lang] ?? widthMapByLang.es;
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -80,27 +105,27 @@ function App() {
 
   const redes = [
     {
-      nombre: "Linkedin",
+      nombre: t(`navbar.socials.linkedin`),
       url: "https://www.linkedin.com/in/ignacio-fonseca-7b5a96263/",
       image: linkedinLogo,
     },
     {
-      nombre: "GitHub",
+      nombre: t(`navbar.socials.github`),
       url: "https://github.com/nachengue007",
       image: githubLogo,
     },
     {
-      nombre: "GitLab",
+      nombre: t(`navbar.socials.gitlab`),
       url: "https://gitlab.com/murdocc9",
       image: gitlabLogo,
     },
     {
-      nombre: "Youtube",
+      nombre: t(`navbar.socials.youtube`),
       url: "https://www.youtube.com/@murdocc9",
       image: youtubeLogo,
     },
     {
-      nombre: "Email Personal",
+      nombre: t(`navbar.socials.email`),
       url: "mailto:fonsecaignacio139@gmail.com",
       image: emailLogo,
     },
@@ -130,21 +155,31 @@ function App() {
         <div className="p-6 flex md:flex-row md:items-center">
           <div className="flex flex-col items-center">
             <h1 className='text-4xl font-bold pb-4 text-white text-center'>Ignacio Fonseca</h1>
-            <p className='pb-6 text-xl text-darkpurple-500 text-center'>FullStack Developer de Aplicaciones Web</p>
-            {renderButton('about', 'Sobre mi')}
-            {renderButton('skills', 'Habilidades')}
-            {renderButton('projects', 'Proyectos')}
-            {renderButton('education', 'Experiencia/Estudios')}
-            {renderButton('aboutPortafolio', 'Sobre este portafolio')}
+            <p className='pb-6 text-xl text-darkpurple-500 text-center'>{t("navbar.title")}</p>
+            {renderButton('about', t(`navbar.about`))}
+            {renderButton('skills', t('navbar.skills'))}
+            {renderButton('projects', t('navbar.projects'))}
+            {renderButton('education', t('navbar.education'))}
+            {renderButton('aboutPortafolio', t('navbar.aboutPortafolio'))}
             <div className='hidden md:flex justify-center items-center p-2'>
               {redes.map((e: any, i: Key) => (
                 <a key={i} className='pr-2' href={e.url} target='_blank'>
                   <a data-tooltip-id="tooltip" data-tooltip-content={e.nombre}>
-                    <img src={e.image} alt={e.nombre} className="w-10 h-10 object-contain"/>
+                    <img src={e.image} alt={e.nombre} className="w-6 hover:w-10 transition-w duration-300 object-contain"/>
                   </a>
                   <Tooltip id="tooltip"/>
                 </a>
               ))}
+            </div>
+
+            <div className='md:pt-8 md:flex justify-center items-center p-2 text-white'>
+              <select name="lenguaje" id="lenguaje" onChange={(e) => changeLanguage(e.target.value)}>
+                {lenguajes.map((lang) => (
+                  <option key={lang.code} value={lang.code}>
+                    {lang.flag} {lang.name}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
         </div>
@@ -166,7 +201,7 @@ function App() {
         </AnimatePresence>
       </div>
 
-      <div className='md:hidden flex justify-center items-center p-2 bg-darkpurple-800 md:w-2/6 md:absolute md:inset-x-1 md:bottom-0'>
+      <div className='md:hidden flex justify-center items-center p-2 bg-darkpurple-800 md:w-2/6 md:absolute md:inset-x-1 md:bottom-0 pb-8'>
         {redes.map((e: any, i: Key) => (
           <a key={i} className='pr-2' href={e.url} target='_blank'>
             <img src={e.image} alt={e.nombre} className="w-10 h-10 object-contain"/>
