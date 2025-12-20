@@ -8,7 +8,7 @@ export function Skills() {
   const apartados = [
     {
       id: 0,
-      titulo: "Programación",
+      titulo: t('skills.programming'),
       items: [
         `C/C++ - ${t('skills.intermediate')}`,
         `C# - ${t('skills.intermediate')}`,
@@ -33,7 +33,7 @@ export function Skills() {
     },
     {
       id: 1,
-      titulo: "Ofimática",
+      titulo: t('skills.office'),
       items: [
         `Microsoft Excel - ${t('skills.intermediate')}`,
         `Microsoft Word - ${t('skills.intermediate')}`,
@@ -44,7 +44,7 @@ export function Skills() {
     },
     {
       id: 2,
-      titulo: "Otros conocimientos",
+      titulo: t('skills.other'),
       items: [
         `SAP - ${t('skills.basic')}`,
         `${t('skills.english_tech')} - ${t('skills.intermediate')}`,
@@ -54,7 +54,7 @@ export function Skills() {
     },
     {
       id: 3,
-      titulo: "Idiomas",
+      titulo: t('skills.lang'),
       items: [
         `${t('skills.spanish')}`,
         `${t('skills.english')}`,
