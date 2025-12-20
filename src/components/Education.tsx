@@ -1,75 +1,78 @@
 import type { Key } from "react";
+import { useTranslation } from "react-i18next";
 
 export function Education(){
+  const { t } = useTranslation();
+  
   const experiencia = [
     {
-      nombre: "Freelance",
-      titulo: "Profesor Particular de Programación",
-      duracion: "Octubre 2025 - Actualidad",
-      descripcion: "Doy clases particulares a gente que estudia programación y necesitan reforzar, ya sea en nivel secundario como nivel universitario.",
+      nombre: t('education.job2.name'),
+      titulo: t('education.job2.title'),
+      duracion: `${t('month.oct')} 2025 - ${t('month.cur')}`,
+      descripcion: t('education.job2.description'),
       aptitudes: ["Python"]
     },
     {
-      nombre: "Instituto Provincial de Educación Superior (IPES)",
-      titulo: "Desarrollador FullStack",
-      duracion: "Febrero 2025 - Diciembre 2025",
-      descripcion: "Estuvimos desarrollando un sistema académico integral como proyecto FullStack, diseñado para optimizar la gestión de información dentro de una universidad. El sistema se divide en dos módulos principales: uno dirigido al personal administrativo y docente, y otro destinado a los alumnos.",
+      nombre: t('education.job1.name'),
+      titulo: t('education.job1.title'),
+      duracion: `${t('month.feb')} 2025 - ${t('month.dec')} 2025`,
+      descripcion: t('education.job1.description'),
       aptitudes: ["PostgreSQL", "TypeScript", "NextJS", "ReactJS", "Shadcn"]
     },
   ];
   const estudios = [
     {
-      nombre: "Universidad Tecnológica Nacional (UTN)",
-      titulo: "Tecnicatura Universitaria en Programación",
-      duracion: "Abril 2021 - Octubre 2025",
-      estado: "Completado",
-      descripcion: "Formación universitaria orientada al desarrollo de software, con énfasis en programación estructurada y orientada a objetos, bases de datos y frameworks modernos para aplicaciones web y de escritorio.",
+      nombre: t('education.education6.name'),
+      titulo: t('education.education6.title'),
+      duracion: `${t('month.apr')} 2021 - ${t('month.oct')} 2025`,
+      estado: t('education.status_complete'),
+      descripcion: t('education.education6.description'),
       aptitudes: ["C/C++", "Java", "Python", "HTML", "jQuery", "SQL", "MySQL", "PhpMyAdmin", "PHP", "Django", "Django REST Framework", "Node.js", "Vue.js", "Docker"]
     },
     {
-      nombre: "Alkemy",
-      titulo: "Programador en .NET + React",
-      duracion: "Marzo 2025 - Junio 2025",
-      estado: "Completado",
-      descripcion: "Entrenamiento intensivo enfocado en el desarrollo de aplicaciones web con tecnologías Microsoft y frontend moderno, combinando .NET y React para proyectos colaborativos con metodologías ágiles.",
+      nombre: t('education.education5.name'),
+      titulo: t('education.education5.title'),
+      duracion: `${t('month.mar')} 2025 - ${t('month.jun')} 2025`,
+      estado: t('education.status_complete'),
+      descripcion: t('education.education5.description'),
       aptitudes: ["Microsoft SQL Server", "SQL Server Management Studio", "Visual Studio", ".NET Framework", "ASP.NET", "Reactjs"]
     },
     {
-      nombre: "Centro Politécnico Malvinas Argentinas",
-      titulo: "Tecnicatura Universitaria en Ciencias de Datos e Inteligencia Artificial",
-      duracion: "Agosto 2023 - Diciembre 2023",
-      estado: "Abandonado",
-      descripcion: "Estudios en análisis de datos, estadística aplicada e introducción a la inteligencia artificial, con herramientas de programación y gestión de bases de datos. (Carrera pausada, plan de retomar en 2026).",
+      nombre: t('education.education4.name'),
+      titulo: t('education.education4.title'),
+      duracion: `${t('month.aug')} 2023 - ${t('month.dec')} 2023`,
+      estado: t('education.status_abandoned'),
+      descripcion: t('education.education4.description'),
       aptitudes: ["Python", "Oracle SQL Developer", "InfoStat", "Prolog"]
     },
     {
-      nombre: "Fundación Mirgor",
-      titulo: "Curso Básico Inicial de Operario de Producción (Fabrica)",
-      duracion: "Marzo 2023 - Abril 2023",
-      estado: "Completado",
-      descripcion: "Capacitación en procesos productivos industriales, gestión de calidad y seguridad ocupacional, aplicando metodologías de mejora continua y prácticas de producción eficientes.",
+      nombre: t('education.education3.name'),
+      titulo: t('education.education3.title'),
+      duracion: `${t('month.mar')} 2023 - ${t('month.apr')} 2023`,
+      estado: t('education.status_complete'),
+      descripcion: t('education.education3.description'),
       aptitudes: ["Sistemas de Gestión Ambiental", "Sistemas de Calidad", "Sistemas de Producción", "Seguridad y Salud Ocupacional (OHS)", "5S"]
     },
     {
-      nombre: "freeCodeCamp",
-      titulo: "Curso HTML y CSS",
+      nombre: t('education.education2.name'),
+      titulo: t('education.education2.title'),
       duracion: "2020 - 2020",
-      estado: "Completado",
-      descripcion: "Curso online orientado al diseño y maquetación de páginas web utilizando estándares modernos de HTML y CSS, con enfoque en buenas prácticas y responsividad.",
+      estado: t('education.status_complete'),
+      descripcion: t('education.education2.description'),
       aptitudes: ["HTML", "CSS"]
     },
     {
-      nombre: "SoloLearn",
-      titulo: "Curso HTML",
+      nombre: t('education.education1.name'),
+      titulo: t('education.education1.title'),
       duracion: "2018 - 2018",
-      estado: "Completado",
-      descripcion: "Curso introductorio en desarrollo web con HTML, adquiriendo las bases para la estructuración de documentos y creación de sitios estáticos.",
+      estado: t('education.status_complete'),
+      descripcion: t('education.education1.description'),
       aptitudes: ["HTML"]
     },
   ];
 
   return <div className="p-4 space-y-6 text-white">
-    <h1 className="text-4xl font-bold text-center">Experiencia</h1>
+    <h1 className="text-4xl font-bold text-center">{t('education.experience')}</h1>
     {experiencia.map((e: any, i: Key) => (
       <div className="md:flex pb-8" key={i}>
         <div className="md:w-1/4 md:pr-4 md:flex md:flex-col items-end">
@@ -91,7 +94,7 @@ export function Education(){
 
     <hr className="border-t border-darkpurple-700" />
 
-    <h1 className="text-4xl font-bold text-center">Estudios</h1>
+    <h1 className="text-4xl font-bold text-center">{t('education.education')}</h1>
     {estudios.map((e: any, i: Key) => (
       <div className="md:flex pb-8" key={i}>
         <div className="md:w-1/4 md:pr-4 md:flex md:flex-col items-end">

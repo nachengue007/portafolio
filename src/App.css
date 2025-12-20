@@ -9,6 +9,10 @@
   --color-darkpurple-light: #FA96FA;
 }
 
+* {
+  font-family: sans-serif;
+}
+
 ::selection {
   color: #320032;
   background: #B14EB1;
@@ -17,3 +21,44 @@
 b {
   color: #B14EB1;
 }
+
+#tooltip {
+  color: #FFFFFF;
+  background-color: #713271;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+  padding: 6px;
+  background: #320032;
+  color: #FFFFFF;
+  transition: 0.5s;
+}
+
+select:hover {
+  background: #B14EB1;
+}
+
+select:focus {
+  outline: none;
+  border-color: #B14EB1;
+}
+
+option {
+  padding: 12px 8px;
+  background: #713271;
+  color: #FFFFFF;
+}
+
+option:hover {
+  background: #B14EB1;
+  color: #FFFFFF;
+}
+
+option:checked {
+  background: #B14EB1;
+  color: #FFFFFF;
+} 

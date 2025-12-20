@@ -1,0 +1,147 @@
+{
+  "translation": {
+    "global":{
+      "close": "Close"
+    },
+    "month": {
+      "jan": "January",
+      "feb": "February",
+      "mar": "March",
+      "apr": "April",
+      "may": "May",
+      "jun": "June",
+      "jul": "July",
+      "aug": "August",
+      "sep": "September",
+      "oct": "October",
+      "nov": "November",
+      "dec": "December",
+      "cur": "Currently"
+    },
+    "navbar": { 
+      "about": "About Me", 
+      "skills": "Skills", 
+      "projects": "Projects", 
+      "education": "Experience/Education", 
+      "aboutPortafolio": "About this Portfolio", 
+      "title": "FullStack Web Application Developer",
+      "socials": {
+        "linkedin": "My Linkedin",
+        "github": "My GitHub repositories",
+        "gitlab": "My GitLab other repositories",
+        "youtube": "My Youtube channel",
+        "email": "My contact email"
+      }
+    },
+    "about": {
+      "text1": "Hey!, I'm <b>Ignacio Fonseca</b>, a <b>Fullstack Developer in training</b>. I currently work with <b>Next.js and React</b>, and on my own I'm learning <b>ASP.NET</b> to strengthen my backend skills.",
+      "text2": "I am most passionate about <b>server-side programming and algorithms</b>.",
+      "text3": "I have developed several <b>personal projects</b>, including web applications and small video games, which have allowed me to apply my knowledge of <b>React, databases, and programming logic</b> in real-world environments.",
+      "text4": "Outside the world of code, I enjoy both <b>video games and board games</b> as well as <b>creating my own video games</b> using <b>GameMaker Studio 1.4</b>, combining creativity and logic in fun and challenging projects.",
+      "text5": "I am always looking to <b>learn new technologies</b>, experiment with <b>innovative projects</b>, and improve my skills by solving <b>programming and algorithm challenges</b>."
+    },
+    "skills": {
+      "basic": "Basic",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "english_tech": "Technical English",
+      "pc": "PC repair and compatibility",
+      "boards": "Repair of electronic boards",
+      "spanish": "Spanish: Native Written, Native Spoken",
+      "english": "English: Intermediate Written, Basic Spoken",
+      "german": "German: Learning"
+    },
+    "project": {
+      "go": "Go to the project",
+      "cs": "Coming soon",
+      "project1":{
+        "name": "Mundo Matriz (Matrix World)",
+        "description": "It is a console program for matrix calculations; it was one of my first approaches to C++."
+      },
+      "project2":{
+        "name": "EncryptFons",
+        "description": "It is a console program where I was experimenting with the use of pointers and memory access."
+      },
+      "project3":{
+        "name": "Run",
+        "description": "It is a game I created while experimenting with the 3D features of GameMaker: Studio 1.4."
+      },
+      "project4":{
+        "name": "Eagle Killer",
+        "description": "It is a Wolfenstein 3D clone that I made in GameMaker: Studio 1.4 to experiment with raycasting. Initially, it started as a game for the Global Game Jam 2021, but I continued its development afterward."
+      },
+      "project5":{
+        "name": "core",
+        "description": "It is a basic and simple shooter experimenting with seed generation and the use of pseudo-random numbers."
+      },
+      "project6":{
+        "name": "Stockify",
+        "description": "A simple inventory system for eCommerce where products can be created, updated, and deleted, as well as managing supplier contact information to track the origin of the products."
+      },
+      "project7":{
+        "name": "DigitalArs Wallet",
+        "description": "It is a digital wallet that my team and I developed as the final project for the Alkemy .NET/React course."
+      },
+      "project8":{
+        "name": "gestion proyectos vuedjango (project management)",
+        "description": "This is a system where you can efficiently manage your projects. You can create, view, update, and delete projects, tasks, and team members. Comments can also be added to help track the progress of each project."
+      },
+      "project9":{
+        "name": "LocalBox",
+        "description": "It is a storage system that allows you to create and manage your own NAS server. You can upload, delete, and download files, manage multiple users, and share files within the network, either with specific users or with all registered users."
+      }
+    },
+    "education": {
+      "status_complete": "Complete",
+      "status_abandoned": "Abandoned",
+      "education": "Education",
+      "experience": "Experience",
+      "job1": {
+        "name": "Instituto Provincial de Educación Superior (IPES)",
+        "title": "FullStack Developer in NextJS with ReactJS",
+        "description": "we developed a comprehensive academic system as a FullStack project, designed to optimize information management within a university. The system is divided into two main modules: one for administrative and teaching staff, and another for students."
+      },
+      "job2": {
+        "name": "Freelance/Independent",
+        "title": "Private programming tutor",
+        "description": "I give private lessons to people who are studying programming and need extra help, whether at the highschool or university level."
+      },
+      "education1": {
+        "name": "SoloLearn",
+        "title": "HTML Course",
+        "description": "Introductory course in web development with HTML, acquiring the fundamentals for document structuring and the creation of static websites."
+      },
+      "education2": {
+        "name": "freeCodeCamp",
+        "title": "HTML and CSS Course",
+        "description": "Online course focused on web page design and layout using modern HTML and CSS standards, with an emphasis on best practices and responsiveness."
+      },
+      "education3": {
+        "name": "Fundacion Mirgor",
+        "title": "Basic Introductory Course for Production Operator (Factory)",
+        "description": "Training in industrial production processes, quality management, and occupational safety, applying continuous improvement methodologies and efficient production practices."
+      },
+      "education4": {
+        "name": "Centro Politécnico Malvinas Argentinas",
+        "title": "Tecnicatura Universitaria en Ciencias de Datos e Inteligencia Artificial (Software Engineer in Data Science and IA)",
+        "description": "Studies in data analysis, applied statistics, and an introduction to artificial intelligence, using programming tools and database management. (Program paused, planning to resume in 2026)."
+      },
+      "education5": {
+        "name": "Alkemy",
+        "title": ".NET + React Developer Program",
+        "description": "Intensive training focused on web application development using Microsoft technologies and modern frontend tools, combining .NET and React for collaborative projects with agile methodologies."
+      },
+      "education6": {
+        "name": "Facultad Regional - Universidad Tecnológica Nacional (FRTDF)",
+        "title": "Tecnicatura Universitaria en Programación (Software Engineer)",
+        "description": "University-level education focused on software development, with an emphasis on structured and object-oriented programming, databases, and modern frameworks for web and desktop applications."
+      }
+    },
+    "aboutPortafolio": {
+      "text1": "This portfolio is built with <b>ReactJS, TypeScript, and TailwindCSS 4</b>.",
+      "text2": "My goal with this project is to showcase my work style and my frontend development skills by creating <b>modern, functional, and optimized</b> interfaces.",
+      "text3": "Through this portfolio, I aim to reflect not only my technical knowledge but also my passion for programming, my attention to detail, and my commitment to writing <b>clean and scalable code</b>, applying best practices at every stage of development.",
+      "text4": "It also represents my continuous learning process and my motivation to grow as a professional, <b>exploring new technologies and challenging myself with each project</b>."
+    }
+  }
+}

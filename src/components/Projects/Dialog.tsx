@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface Proyecto {
   nombre: string;
@@ -14,12 +15,14 @@ interface DialogProps {
   n: Proyecto;
 }
 
-export function Dialog({ n }: DialogProps ) {
+export function Dialog({ n }: DialogProps) {
   const [open, setOpen] = useState(false);
   const [galleryState, setGalleryState] = useState({
     index: 0,
     direction: 0
   });
+
+  const { t } = useTranslation();
 
   const handleNext = () => {
     if (n.screenshots) {
@@ -49,7 +52,7 @@ export function Dialog({ n }: DialogProps ) {
       <div className="max-w-sm rounded-lg transition-colors duration-200 text-white bg-darkpurple-700 hover:text-darkpurple-800 hover:bg-darkpurple-400">
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
-            <span className="font-bold text-xl">{n.nombre}</span>
+            <span className="font-bold text-xl text-left">{n.nombre}</span>
             <img src={n.image} alt={n.nombre} className="w-12 h-12 object-contain" />
           </div>
         </div>
@@ -130,15 +133,15 @@ export function Dialog({ n }: DialogProps ) {
     
           <div className="flex justify-between mt-2">
             <button onClick={() => setOpen(false)} className="text-sm text-sm text-darkpurple-700 font-semibold transition-colors duration-300 hover:text-darkpurple-400 hover:underline">
-              Cerrar
+              {t('global.close')}
             </button>
             {n.url !== "" ? 
               <a href={n.url} target="_blank" className="text-sm text-darkpurple-700 font-semibold transition-colors duration-300 hover:text-darkpurple-400 hover:underline">
-                Ir al proyecto
+                {t('project.go')}
               </a>
             : 
               <p className="text-sm text-darkpurple-700 font-semibold transition-colors duration-300 hover:text-darkpurple-400 hover:underline">
-                Proximamente
+                {t('project.cs')}
               </p>
             }
           </div>
