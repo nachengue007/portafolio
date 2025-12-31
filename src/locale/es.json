@@ -51,9 +51,12 @@
       "english_tech": "Inglés técnico",
       "pc": "Reparación de PC y compatibilidad",
       "boards": "Reparación de placas electronicas",
-      "spanish": "Español: Escrito Nativo, Oral Nativo",
-      "english": "Inglés: Escrito Intermedio, Oral Básico",
-      "german": "Alemán: Aprendiendo"
+      "spanish": "Español",
+      "english": "Inglés",
+      "german": "Alemán",
+      "spanish_text": "Escrito Nativo, Oral Nativo",
+      "english_text": "Escrito Intermedio, Oral Básico",
+      "learning": "Aprendiendo"
     },
     "project": {
       "go": "Ir al proyecto",
