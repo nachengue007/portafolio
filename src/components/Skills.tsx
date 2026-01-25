@@ -10,55 +10,55 @@ export function Skills() {
       id: 0,
       titulo: t('skills.programming'),
       items: [
-        `C/C++ - ${t('skills.intermediate')}`,
-        `C# - ${t('skills.intermediate')}`,
-        `.NET 8 Web Api - ${t('skills.intermediate')}`,
-        `Java - ${t('skills.intermediate')}`,
-        `JavaScript - ${t('skills.intermediate')}`,
-        `PHP - ${t('skills.intermediate')}`,
-        `Python - ${t('skills.intermediate')}`,
-        `SQL - ${t('skills.intermediate')}`,
-        `CSS3 - ${t('skills.basic')}`,
-        `MS SQL Server 2022 - ${t('skills.intermediate')}`,
-        `MySQL - ${t('skills.basic')}`,
-        `PostgreSQL - ${t('skills.intermediate')}`,
-        `GameMaker: Studio 1.4 - ${t('skills.advanced')}`,
-        `GameMaker 2025 - ${t('skills.intermediate')}`,
-        `React - ${t('skills.intermediate')}`,
-        `Tailwind CSS - ${t('skills.basic')}`,
-        `Django - ${t('skills.basic')}`,
-        `Next.js - ${t('skills.intermediate')}`,
-        `Docker - ${t('skills.basic')}`,
+        `<b>C/C++</b> - ${t('skills.intermediate')}`,
+        `<b>C#</b> - ${t('skills.intermediate')}`,
+        `<b>.NET 8 Web Api</b> - ${t('skills.intermediate')}`,
+        `<b>Java</b> - ${t('skills.intermediate')}`,
+        `<b>JavaScript</b> - ${t('skills.intermediate')}`,
+        `<b>PHP</b> - ${t('skills.intermediate')}`,
+        `<b>Python</b> - ${t('skills.intermediate')}`,
+        `<b>SQL</b> - ${t('skills.intermediate')}`,
+        `<b>CSS3</b> - ${t('skills.basic')}`,
+        `<b>MS SQL Server 2022</b> - ${t('skills.intermediate')}`,
+        `<b>MySQL</b> - ${t('skills.basic')}`,
+        `<b>PostgreSQL</b> - ${t('skills.intermediate')}`,
+        `<b>GameMaker: Studio 1.4</b> - ${t('skills.advanced')}`,
+        `<b>GameMaker 2025</b> - ${t('skills.intermediate')}`,
+        `<b>React</b> - ${t('skills.intermediate')}`,
+        `<b>Tailwind CSS</b> - ${t('skills.basic')}`,
+        `<b>Django</b> - ${t('skills.basic')}`,
+        `<b>Next.js</b> - ${t('skills.intermediate')}`,
+        `<b>Docker</b> - ${t('skills.basic')}`,
       ]
     },
     {
       id: 1,
       titulo: t('skills.office'),
       items: [
-        `Microsoft Excel - ${t('skills.intermediate')}`,
-        `Microsoft Word - ${t('skills.intermediate')}`,
-        `Microsoft PowerPoint - ${t('skills.intermediate')}`,
-        `LibreOffice Calc - ${t('skills.intermediate')}`,
-        `LibreOffice Write - ${t('skills.intermediate')}`,
+        `<b>Microsoft Excel</b> - ${t('skills.intermediate')}`,
+        `<b>Microsoft Word</b> - ${t('skills.intermediate')}`,
+        `<b>Microsoft PowerPoint</b> - ${t('skills.intermediate')}`,
+        `<b>LibreOffice Calc</b> - ${t('skills.intermediate')}`,
+        `<b>LibreOffice Write</b> - ${t('skills.intermediate')}`,
       ]
     },
     {
       id: 2,
       titulo: t('skills.other'),
       items: [
-        `SAP - ${t('skills.basic')}`,
-        `${t('skills.english_tech')} - ${t('skills.intermediate')}`,
-        `${t('skills.pc')} - ${t('skills.intermediate')}`,
-        `${t('skills.boards')} - ${t('skills.basic')}`,
+        `<b>SAP</b> - ${t('skills.basic')}`,
+        `<b>${t('skills.english_tech')}</b> - ${t('skills.intermediate')}`,
+        `<b>${t('skills.pc')}</b> - ${t('skills.intermediate')}`,
+        `<b>${t('skills.boards')}</b> - ${t('skills.basic')}`,
       ]
     },
     {
       id: 3,
       titulo: t('skills.lang'),
       items: [
-        `${t('skills.spanish')}`,
-        `${t('skills.english')}`,
-        `${t('skills.german')}`,
+        `<b>${t('skills.spanish')}</b> - ${t('skills.spanish_text')}`,
+        `<b>${t('skills.english')}</b> - ${t('skills.english_text')}`,
+        `<b>${t('skills.german')}</b> - ${t('skills.learning')}`,
       ]
     },
   ];
@@ -110,9 +110,7 @@ export function Skills() {
                     exit="closed"
                   >
                     {a.items.map((p: String) => (
-                      <motion.li key={p.toString()} variants={listItemVariants}>
-                        {p}
-                      </motion.li>
+                      <motion.li key={p.toString()} variants={listItemVariants} dangerouslySetInnerHTML={{ __html: p }} />
                     ))}
                   </motion.ul>
                 )}

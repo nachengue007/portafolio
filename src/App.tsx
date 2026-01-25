@@ -69,6 +69,10 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    changeLanguage('es');
+  }, []);
+
   const secciones = {
     'about': (<About />),
     'skills': (<Skills />),

@@ -51,9 +51,12 @@
       "english_tech": "Technical English",
       "pc": "PC repair and compatibility",
       "boards": "Repair of electronic boards",
-      "spanish": "Spanish: Native Written, Native Spoken",
-      "english": "English: Intermediate Written, Basic Spoken",
-      "german": "German: Learning"
+      "spanish": "Spanish",
+      "english": "English",
+      "german": "German",
+      "spanish_text": "Native Written, Native Spoken",
+      "english_text": "Intermediate Written, Basic Spoken",
+      "learning": "Learning"
     },
     "project": {
       "go": "Go to the project",
