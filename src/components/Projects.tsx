@@ -147,7 +147,7 @@ export function Projects() {
   ];
 
   return <div className="pl-2 flex flex-col md:justify-center md:h-screen">
-    <div className="p-4 grid grid-cols-1 md:grid-cols-3">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 m-auto">
       {proyectos.map((p) => (
         <Dialog key={p.id} n={p} />
       ))}

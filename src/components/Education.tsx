@@ -71,7 +71,7 @@ export function Education(){
     },
   ];
 
-  return <div className="p-4 space-y-6 text-white">
+  return <div className="p-4 mt-15 space-y-6 text-white">
     <h1 className="text-4xl font-bold text-center">{t('education.experience')}</h1>
     {experiencia.map((e: any, i: Key) => (
       <div className="md:flex pb-8" key={i}>
@@ -83,9 +83,14 @@ export function Education(){
           <h1 className="text-3xl underline text-darkpurple-400">{e.nombre}</h1>
           <h2 className="text-2xl">{e.titulo}</h2>
           <p>{e.descripcion}</p>
-          <ul className="pl-6 pt-2 text-darkpurple-500 grid sm:grid-cols-4 md:grid-cols-6 gap-2">
+          <ul className="mt-4 text-darkpurple-500 flex flex-wrap gap-4">
             {e.aptitudes.map((a: any, j: Key) => (
-              <li key={j}>{a}</li>  
+              <li 
+                key={j}
+                className="bg-darkpurple-700 px-3 py-1 w-fit text-sm text-white rounded-xl transition-colors duration-300 hover:bg-darkpurple-500 hover:text-darkpurple-800"
+              >
+                {a}
+              </li>  
             ))}
           </ul>
         </div>
@@ -106,9 +111,14 @@ export function Education(){
           <h1 className="text-3xl underline text-darkpurple-400">{e.nombre}</h1>
           <h2 className="text-2xl">{e.titulo}</h2>
           <p>{e.descripcion}</p>
-          <ul className="pl-6 pt-2 text-darkpurple-500 grid sm:grid-cols-4 md:grid-cols-6 gap-2">
+          <ul className="mt-4 text-darkpurple-500 flex flex-wrap gap-4">
             {e.aptitudes.map((a: any, j: Key) => (
-              <li key={j}>{a}</li>  
+              <li 
+                key={j}
+                className="bg-darkpurple-700 px-3 py-1 w-fit text-sm text-white rounded-xl transition-colors duration-300 hover:bg-darkpurple-500 hover:text-darkpurple-800"
+              >
+                {a}
+              </li>  
             ))}
           </ul>
         </div>
