@@ -8,6 +8,7 @@ import stockifyImage from "../assets/proyectos/iconos/stockify.png";
 import digitalArsImage from "../assets/proyectos/iconos/digitalArs.svg";
 import vuetifyImage from "../assets/proyectos/iconos/vuetify.ico";
 import netcoreImage from "../assets/proyectos/iconos/netcore.png";
+import rustImage from "../assets/proyectos/iconos/rust.png";
 
 /// screenshots 
 // stokify
@@ -57,6 +58,13 @@ import run_2 from "../assets/proyectos/screenshots/run/run_2.jpg";
 import run_3 from "../assets/proyectos/screenshots/run/run_3.jpg";
 import run_4 from "../assets/proyectos/screenshots/run/run_4.jpg";
 import run_5 from "../assets/proyectos/screenshots/run/run_5.jpg";
+
+// camelCase
+import camelCase_1 from "../assets/proyectos/screenshots/camelCase/camelCase_1.png";
+import camelCase_2 from "../assets/proyectos/screenshots/camelCase/camelCase_2.png";
+import camelCase_3 from "../assets/proyectos/screenshots/camelCase/camelCase_3.png";
+import camelCase_4 from "../assets/proyectos/screenshots/camelCase/camelCase_4.png";
+
 import { useTranslation } from "react-i18next";
 
 export function Projects() {
@@ -144,10 +152,19 @@ export function Projects() {
       image: netcoreImage,
       screenshots: [],
     },
+    {
+      id: 9,
+      nombre: t('project.project10.name'),
+      descripcion: t('project.project10.description'),
+      tecnologias: ["Rust"],
+      url: "https://github.com/nachengue007/camelCase-Editor",
+      image: rustImage,
+      screenshots: [camelCase_1, camelCase_2, camelCase_3, camelCase_4],
+    },
   ];
 
   return <div className="pl-2 flex flex-col md:justify-center md:h-screen">
-    <div className="p-4 grid grid-cols-1 md:grid-cols-3">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 m-auto">
       {proyectos.map((p) => (
         <Dialog key={p.id} n={p} />
       ))}

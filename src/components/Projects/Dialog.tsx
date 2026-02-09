@@ -46,7 +46,7 @@ export function Dialog({ n }: DialogProps) {
     <motion.button
       whileHover={{ scale: 1.045 }}
       whileTap={{ scale: 0.9 }}
-      className="pb-8" 
+      className="pb-8 cursor-pointer" 
       onClick={() => setOpen(true)}
     >
       <div className="max-w-sm rounded-lg transition-colors duration-200 text-white bg-darkpurple-700 hover:text-darkpurple-800 hover:bg-darkpurple-400">
@@ -132,11 +132,11 @@ export function Dialog({ n }: DialogProps) {
           </div>
     
           <div className="flex justify-between mt-2">
-            <button onClick={() => setOpen(false)} className="text-sm text-sm text-darkpurple-700 font-semibold transition-colors duration-300 hover:text-darkpurple-400 hover:underline">
+            <button onClick={() => setOpen(false)} className="text-sm text-sm text-darkpurple-700 font-semibold transition-colors duration-300 hover:text-darkpurple-400 hover:underline cursor-pointer">
               {t('global.close')}
             </button>
             {n.url !== "" ? 
-              <a href={n.url} target="_blank" className="text-sm text-darkpurple-700 font-semibold transition-colors duration-300 hover:text-darkpurple-400 hover:underline">
+              <a href={n.url} target="_blank" className="text-sm text-darkpurple-400 font-semibold transition-colors duration-300 hover:text-darkpurple-400 hover:underline cursor-pointer">
                 {t('project.go')}
               </a>
             : 

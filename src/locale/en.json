@@ -62,7 +62,7 @@
       "go": "Go to the project",
       "cs": "Coming soon",
       "project1":{
-        "name": "Mundo Matriz (Matrix World)",
+        "name": "Mundo Matriz",
         "description": "It is a console program for matrix calculations; it was one of my first approaches to C++."
       },
       "project2":{
@@ -90,12 +90,16 @@
         "description": "It is a digital wallet that my team and I developed as the final project for the Alkemy .NET/React course."
       },
       "project8":{
-        "name": "gestion proyectos vuedjango (project management)",
+        "name": "gestion proyectos",
         "description": "This is a system where you can efficiently manage your projects. You can create, view, update, and delete projects, tasks, and team members. Comments can also be added to help track the progress of each project."
       },
       "project9":{
         "name": "LocalBox",
         "description": "It is a storage system that allows you to create and manage your own NAS server. You can upload, delete, and download files, manage multiple users, and share files within the network, either with specific users or with all registered users."
+      },
+      "project10":{
+        "name": "camelCase-Editor",
+        "description": "Simple and efficient text editor developed in Rust. Provides a lightweight experience for editing files with an intuitive interface."
       }
     },
     "education": {
