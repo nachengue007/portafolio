@@ -62,7 +62,7 @@
       "go": "Go to the project",
       "cs": "Coming soon",
       "project1":{
-        "name": "Mundo Matriz (Matrix World)",
+        "name": "Mundo Matriz",
         "description": "It is a console program for matrix calculations; it was one of my first approaches to C++."
       },
       "project2":{
