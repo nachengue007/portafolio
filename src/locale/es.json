@@ -90,12 +90,16 @@
         "description": "Es una billetera virtual que hicimos con un equipo para el curso de .NET/React de Alkemy como proyecto final de cursada."
       },
       "project8":{
-        "name": "gestion proyectos vuedjango",
+        "name": "gestion proyectos",
         "description": "Este es un sistema donde podrás gestionar tus proyectos de forma eficiente. Podrás crear, ver, actualizar y eliminar proyectos, tareas y miembros del equipo. También se pueden agregar comentarios para facilitar el progreso de cada proyecto."
       },
       "project9":{
         "name": "LocalBox",
         "description": "Es un sistema de almacenamiento para poder crear y gestionar tu propio servidor NAS. Donde podes guardar, eliminar y descargar archivos, tener multiples usuarios y compartir dentro de la red tus archivos, ya sean a usuarios en especifico como a todos los que esten registrados."
+      },
+      "project10":{
+        "name": "camelCase-Editor",
+        "description": "Editor de textos simple y eficiente desarrollado en Rust. Proporciona una experiencia ligera para edición de archivos con una interfaz intuitiva."
       }
     },
     "education": {
