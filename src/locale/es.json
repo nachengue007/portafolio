@@ -113,6 +113,11 @@
         "description": "Estuvimos desarrollando un sistema académico integral como proyecto FullStack, diseñado para optimizar la gestión de información dentro de una universidad. El sistema se divide en dos módulos principales: uno dirigido al personal administrativo y docente, y otro destinado a los alumnos."
       },
       "job2": {
+        "name": "Servicio técnico de computadoras e impresoras",
+        "title": "Técnico en servicio técnico",
+        "description": "Hago diagnósticos, reparo y limpio PC, Notebooks e impresoras, formateo e instalo sistemas operativos con sus programas y armado de PC a medida."
+      },
+      "job3": {
         "name": "Freelance/Independiente",
         "title": "Profesor Particular de Programación",
         "description": "Doy clases particulares a gente que estudia programación y necesitan reforzar, ya sea en nivel secundario como nivel universitario."

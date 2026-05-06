@@ -113,6 +113,11 @@
         "description": "we developed a comprehensive academic system as a FullStack project, designed to optimize information management within a university. The system is divided into two main modules: one for administrative and teaching staff, and another for students."
       },
       "job2": {
+        "name": "Computer and Printer Repair Service",
+        "title": "Technical Support Specialist",
+        "description": "I diagnose, repair, and clean PCs, laptops, and printers; I format and install operating systems and software; and I build custom PCs."
+      },
+      "job3": {
         "name": "Freelance/Independent",
         "title": "Private programming tutor",
         "description": "I give private lessons to people who are studying programming and need extra help, whether at the highschool or university level."
