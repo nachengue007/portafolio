@@ -6,11 +6,18 @@ export function Education(){
   
   const experiencia = [
     {
-      nombre: t('education.job2.name'),
-      titulo: t('education.job2.title'),
+      nombre: t('education.job3.name'),
+      titulo: t('education.job3.title'),
       duracion: `${t('month.oct')} 2025 - ${t('month.cur')}`,
       descripcion: t('education.job2.description'),
       aptitudes: ["Python"]
+    },
+    {
+      nombre: t('education.job2.name'),
+      titulo: t('education.job2.title'),
+      duracion: `${t('month.jan')} 2018 - ${t('month.cur')}`,
+      descripcion: t('education.job2.description'),
+      aptitudes: ["Windows", "Debian", "Ubuntu", "LinuxMint", "Microsoft Office", "OpenOffice"]
     },
     {
       nombre: t('education.job1.name'),
