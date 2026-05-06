@@ -125,7 +125,7 @@ function App() {
     },
     {
       nombre: t(`navbar.socials.youtube`),
-      url: "https://www.youtube.com/@murdocc9",
+      url: "https://www.youtube.com/@ignaciofonseca5830",
       image: youtubeLogo,
     },
     {
