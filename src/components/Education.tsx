@@ -9,7 +9,7 @@ export function Education(){
       nombre: t('education.job3.name'),
       titulo: t('education.job3.title'),
       duracion: `${t('month.oct')} 2025 - ${t('month.cur')}`,
-      descripcion: t('education.job2.description'),
+      descripcion: t('education.job3.description'),
       aptitudes: ["Python"]
     },
     {
