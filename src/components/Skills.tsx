@@ -29,6 +29,9 @@ export function Skills() {
         `<b>Django</b> - ${t('skills.basic')}`,
         `<b>Next.js</b> - ${t('skills.intermediate')}`,
         `<b>Docker</b> - ${t('skills.basic')}`,
+        `<b>Rust</b> - ${t('skills.intermediate')}`,
+        `<b>Postman</b> - ${t('skills.intermediate')}`,
+        `<b>Bruno API Client</b> - ${t('skills.intermediate')}`,
       ]
     },
     {
